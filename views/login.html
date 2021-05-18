@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Hour</title>
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- fontAweosum -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- googleFonts -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+  <link rel="stylesheet" href="../style/login.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/fbbfa0b668.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+
+		<form autocomplete="off" class="form-group" id="signup-form">
+			<h1>Criar conta</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou use seu email para cadastro</span>
+      <input class="form-control" type="text" id="name" placeholder="Nome" required />
+			<input class="form-control" type="email" id="email" placeholder="Email" required/>
+			<input class="form-control" type="password" id="password" placeholder="Senha" required/>
+			<button type="submit">Cadastrar</button>
+		</form>
+    <div class="container error" id="signupError"></div>
+    <div class="container error" id="signupError2"></div>
+	</div>
+
+	<div class="form-container sign-in-container">
+		<form autocomplete="off" class="form-group" id="login-form">
+			<h1>Entrar</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou use sua conta</span>
+			<input type="email" id="login-email" class="form-control" placeholder="Email" required  />
+			<input type="password" id="login-password" class="form-control" placeholder="Senha" required />
+			<a href="#">Esqueceu sua senha?</a>
+			<button type="submit">Entrar</button>
+		</form>
+    <div class="container error" id="loginError"></div>
+
+
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bem vindo de volta!</h1>
+				<p>Para se manter conectado conosco, faça o login com suas informações pessoais</p>
+				<button class="ghost" id="signIn">Entrar</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Olá, amigo(a)!</h1>
+				<p>Insira seus dados pessoais e comece sua jornada conosco</p>
+				<button class="ghost" id="signUp">Cadastrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		Inspirado por
+		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">Florin Pop</a>
+	</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+
+<script>
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyAhbDzN276AmUuofyfq8UGk0lvRl9bf5oI",
+  authDomain: "bookhour-35976.firebaseapp.com",
+  projectId: "bookhour-35976",
+  storageBucket: "bookhour-35976.appspot.com",
+  messagingSenderId: "27768291597",
+  appId: "1:27768291597:web:a4ee4b37f8faf267b67044",
+  measurementId: "G-47C0P0B0LP"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+</script>
+
+<script src="../javascript/login.js"></script>
+</body>
+
+</html>
