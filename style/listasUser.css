@@ -28,6 +28,7 @@
     align-items: center;
     padding: 30px;
   }  
+
   .btnAdd {
       background-color: #A020F0;
       color: #FFFFFF;
@@ -38,7 +39,7 @@
       text-transform: uppercase;
   }
   
-  .todo-box, .caixa-lista {
+  .todo-box, .caixa-lista, .caixa_lidos {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +52,7 @@
   
   }
   
-  .todo-box button, .caixa-lista button {
+  .todo-box button, .caixa-lista button, .caixa_lidos button {
     color: red;
     border: hidden;
     outline: none !important;
@@ -61,6 +62,7 @@
   .listas {
     display: flex;
     justify-content: space-around;
+    margin-top: 2rem;
    
   }
   
@@ -75,28 +77,25 @@
     text-align: center;
   }
   
+  .container, .espaco, .espaco_lidos{
+    margin-top: 1rem;
+  }
+
   /* Autocomplete search*/
-   /*the container must be positioned relative:*/
-  
-  .form-control, .campo__busca-desktop{
-    margin-top: 24px;
-    margin-left: 20%;
+   
+  .desejadosAdd, .campo__busca-desktop, .lidosAdd{  
     height: 44px;
+    width: 60%;
   }
 
   
-  input {
+  input[type=search] {
     border: 1px solid transparent;
     background-color: #f1f1f1;
     padding: 10px;
     font-size: 16px;
   }
   
-  input[type=text] {
-    float: left;
-    background-color: #f1f1f1;
-    width: 50%;
-  }
   
   input[type=submit] {
     background-color: rgb(191, 30, 255);
@@ -128,4 +127,22 @@
     color: #ffffff; 
   }
 
- 
+  .formAdd, .campo_pesquisar, .addLidos{
+    display: none;
+  }
+
+ .displayDesejados{
+   display: block;
+ }
+
+ .displayLendo{
+  display: block;
+}
+
+.displayLido{
+  display: block;
+}
+
+#form, #campo, #campo_lidos{
+  margin-left: 2rem;
+}
