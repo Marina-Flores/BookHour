@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Open Sans', serif;
+  }
+  
+  .box{
+    width: 100%;
+    height: auto;
+    background: #A020F0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }  
+  .btnAdd {
+      background-color: #A020F0;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  
+  .todo-box, .caixa-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4e4e4;
+    margin: 3px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    
+  
+  }
+  
+  .todo-box button, .caixa-lista button {
+    color: red;
+    border: hidden;
+    outline: none !important;
+    cursor: pointer;
+  }
+  
+  .listas {
+    display: flex;
+    justify-content: space-around;
+   
+  }
+  
+   .livrosDesejados, .livrosLidos, .livrosLendo{
+    width: 30%;
+    height: 100vh;
+    margin-left: 10px;
+    border: 1px solid #A020F0;
+  }
+    
+  h3 {
+    text-align: center;
+  }
+  
+  /* Autocomplete search*/
+   /*the container must be positioned relative:*/
+  
+  .form-control, .campo__busca-desktop{
+    margin-top: 24px;
+    margin-left: 20%;
+    height: 44px;
+  }
+
+  
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type=text] {
+    float: left;
+    background-color: #f1f1f1;
+    width: 50%;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(191, 30, 255);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items {
+    text-align: center;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;   
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }
+
+ 
