@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Listas</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../style/profile.css">
+
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- fontAweosum -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- googleFonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
+</head>
+
+<body>
+
+  <header class="bio">
+    <div class="header">
+        <p class="welcome">Olá, <span id="username"></span></p>  
+        <p class="email"><span id="email"></span></p>  
+    </div><br>
+  </header>
+
+    <main class="grid">
+      <section class="config">
+        <div class="container">
+          <p>Favoritos:</p>     
+
+          
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Alterar dados</button>          
+
+        
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Configurações</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Redefinir Email</p>
+                  <p>Redefinir senha</p>
+                  <p>Redefinir username</p>
+                  <p>Excluir conta</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+     <section class="qntTotais">
+      <div class="qntLidos">
+        <p class="lidosTotal"></p>
+      </div>
+
+      <div class="qntLendo">
+       <p class="lendoTotal"></p>
+     </div>
+
+     <div class="qntDesejados">
+       <p class="desejadosTotal"></p>
+     </div> 
+     <button type="button" class="logout">Sair</button>
+     </section>
+      
+        
+    </main>
+   
+
+<script>
+  
+</script>
+
+
+
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyAhbDzN276AmUuofyfq8UGk0lvRl9bf5oI",
+          authDomain: "bookhour-35976.firebaseapp.com",
+          projectId: "bookhour-35976",
+          storageBucket: "bookhour-35976.appspot.com",
+          messagingSenderId: "27768291597",
+          appId: "1:27768291597:web:a4ee4b37f8faf267b67044",
+          measurementId: "G-47C0P0B0LP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const fs = firebase.firestore();
+        const db = firebase.firestore();
+      </script>
+
+   
+     <script src="../javascript/profile.js"></script> 
+</body>
+
+</html>

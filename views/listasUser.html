@@ -22,9 +22,28 @@
 
   <header class="box">
     <div class="header">
-        <h3>Olá, <span id="username"></span></h3>
-        <h5>Aqui estão suas listas</h5>
-    </div><br>
+        <h3 class="welcome">Olá, <span id="username"></span></h3>
+        <h5 class="welcome">Aqui estão suas listas</h5>
+    </div>
+    
+    <div class="qntTotais">
+
+      <div class="qntLidos">
+        <p class="lidosTotal"></p>
+        <p>Livros lidos</p>
+      </div>
+
+      <div class="qntLendo">
+       <p class="lendoTotal"></p>
+       <p>Livros em leitura</p>
+     </div>
+
+     <div class="qntDesejados">
+       <p class="desejadosTotal"></p>
+       <p>Livros em espera</p>
+     </div> 
+
+     </div>
   </header>
 
     
@@ -35,8 +54,8 @@
 
       <div class="formAdd">
         <form autocomplete="off" id="form">       
-          <input type="search" class="desejadosAdd" id="todos" placeholder="Busque pelo título" required>
-          <input type="submit" class="btnAdd" value="Adicionar">    
+          <input type="search" class="desejadosAdd" id="todos" placeholder="Busque pelo título" required>          
+          <input type="submit" class="btnAdd" value="Adicionar">  
       </form>
       </div>  
 
@@ -58,6 +77,8 @@
         <div class="espaco lista-espaco" id="lista-espaco" draggable="true" ondragstart="drag(event)"></div>
 
     </div>
+
+    
  
    <div class="livrosLidos" ondrop="drop(event)" ondragover="allowDrop(event)">
     <h3>Já li!<i class="fas fa-plus icone-adicionar-lido"></i></h3>
@@ -69,12 +90,21 @@
     </form>
       </div>
 
-      <div class="espaco_lidos lista-espaco_lidos" id="lista-espaco_lidos" draggable="true" ondragstart="drag(event)">
-      
+      <div class="espaco_lidos lista-espaco_lidos" id="lista-espaco_lidos" draggable="true" ondragstart="drag(event)">      
       </div>     
    </div>
-
+S
   </div>
+
+
+
+
+
+
+
+
+
+
 
    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
@@ -110,9 +140,6 @@
     <script src="../javascript/livrosLendo.js"></script>
     <script src="../javascript/livrosLidos.js"></script>
     <script src="../javascript/inputAddLivro.js"></script>
-
-
-
 </body>
 
 </html>

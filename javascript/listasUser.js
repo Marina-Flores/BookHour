@@ -107,3 +107,39 @@ auth.onAuthStateChanged(user => {
     }
 })
 
+
+//vendo quantos elementos tem na lista de lidos
+auth.onAuthStateChanged(user => {
+    const quantidade = document.querySelector(".lidosTotal")
+    if(user) {
+        fs.collection('Livros lidos' + ' ' + user.uid).get().then(function(querySnapshot) {
+           
+                quantidade.innerHTML = querySnapshot.size;           
+            
+        })
+    }
+})
+
+//vendo quantos elementos tem na lista de lendo
+auth.onAuthStateChanged(user => {
+    const quantidade = document.querySelector(".lendoTotal")
+    if(user) {
+        fs.collection('Livros lendo' + ' ' + user.uid).get().then(function(querySnapshot) {
+           
+                quantidade.innerHTML = querySnapshot.size;         
+            
+        })
+    }
+})
+
+//vendo quantos elementos tem na lista de lendo
+auth.onAuthStateChanged(user => {
+    const quantidade = document.querySelector(".desejadosTotal")
+    if(user) {
+        fs.collection('Livros desejados' + user.uid).get().then(function(querySnapshot) {
+           
+                quantidade.innerHTML = querySnapshot.size;         
+            
+        })
+    }
+})

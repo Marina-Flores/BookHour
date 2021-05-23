@@ -1,6 +1,6 @@
 const lista_espaco = document.getElementById('lista-espaco');
 
-// Adicionando na lista de livros lendo //
+// Criando lista de livros lendo //
 function renderizarDados (docIndividual){
     // div pai
     let divPai = document.createElement("div");
@@ -79,3 +79,4 @@ auth.onAuthStateChanged(user => {
         })
     }
 })
+
