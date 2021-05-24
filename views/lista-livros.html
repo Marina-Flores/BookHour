@@ -3,9 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/lista-livros.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </head>
@@ -13,10 +17,11 @@
 <body>
     <header>
         <div class="box">
-            <h1>
-                <img src="../img/logo1.png" alt="Logo da Book Hour" style="height: 230px;">
-            </h1>
-            <nav>
+            <div class="logo">
+                <img class="logoBookHour" src="../img/logo1.png" alt="Logo da Book Hour" style="height: 230px; display: block; margin: 0 auto;">
+              </div>
+           
+              <nav>
                 <ul>
                     <li><a href="lista-livros.html">Home</a></li>
                     <li><a href="./profile.html">Perfil</a></li>
@@ -31,7 +36,7 @@
   <div class="seila">
     <h1 tabindex="0" id="title">Lista de livros</h1>
 
-    <h3>Procure pelo nome do livre</h3>
+    <h3 class="text_filter">Procure pelo nome do livre</h3>
     <label for="filtrar-tabela">Filtre:</label>
 		<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do livro">
   </div>
@@ -44,15 +49,47 @@
               src="../img/HP.jpg"
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e a  <br> Pedra Filosofal<br> 1977</h1>
+            <h1 class="cards__artist" tabindex="0">Harry Potter e a  <br> Pedra Filosofal<br> 1977          
+                <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#myModal">Mais informações</a>
+            </h1>
 
-          </div>
-          <div class="cards__back">
-            <h2 tabindex="0">Descrição</h2>
-            <p class="autor">Autor(a): Emma Watson</p>
-            <p>Harry Potter e a Pedra Filosofal é o primeiro dos sete livros da série de fantasia Harry Potter, escrita por J. K. Rowling. O livro conta a história de Harry Potter, um órfão criado pelos tios que descobre, em seu décimo primeiro aniversário, que é um bruxo.</p>
+          </div>        
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal Harry Potter e a Pedra Filosofal-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Descrição</h4>
+              </div>
+              <div class="modal-body">
+                <p class="autor">Autor(a): Emma Watson</p>
+                <p>Harry Potter e a Pedra Filosofal é o primeiro dos sete livros da série de fantasia Harry Potter, escrita por J. K. Rowling. O livro conta a história de Harry Potter, um órfão criado pelos tios que descobre, em seu décimo primeiro aniversário, que é um bruxo.</p>
+              </div>
+              <div class="espaco_comentarios">
+                <h3>Adicionar um comentário</h3>
+            
+                <div class="addComentario">
+                  <form autocomplete="off" id="campo_comentario">
+                  <input type="search" class="comentarioAdd" id="comentario" placeholder="Faça um comentário" required> 
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+                  </div>
+            
+                  <div class="comentarios" id="lista-espaco_comentarios">      
+                  </div>     
+               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
           </div>
         </div>
+        
 
         <div class="cards__single">
           <div class="cards__front">
@@ -314,8 +351,36 @@
         </div>
 </main>
 
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use -->
+ <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+
+ <script>
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     var firebaseConfig = {
+       apiKey: "AIzaSyAhbDzN276AmUuofyfq8UGk0lvRl9bf5oI",
+       authDomain: "bookhour-35976.firebaseapp.com",
+       projectId: "bookhour-35976",
+       storageBucket: "bookhour-35976.appspot.com",
+       messagingSenderId: "27768291597",
+       appId: "1:27768291597:web:a4ee4b37f8faf267b67044",
+       measurementId: "G-47C0P0B0LP"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+
+     const auth = firebase.auth();
+     const fs = firebase.firestore();
+     const db = firebase.firestore();
+   </script>
+
     <script src="../javascript/filtraLista.js"></script>
-    <script src="../javascript/cardsFlip.js"></script>
+    <script src="../javascript/comentarios.js"></script>
 
 </body>
 </html>

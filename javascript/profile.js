@@ -47,3 +47,5 @@ logout.addEventListener('click', function(){
         //An error happened
     })
 })
+
+

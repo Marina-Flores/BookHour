@@ -113,12 +113,34 @@ function autocomplete(inp, arr) {
   /*An array containing all the country names in the world:*/
   var countries = [
       "Harry Potter e a Pedra Filosofal",
-      "Harry Potter e o enígma do Príncipe",
-      "Percy Jackson",
-      "A menina que roubava livros",
-      "Angola",
-      "Anguilla",
-      "Antigua & Barbuda",
+      "Harry Potter e o Enígma do Príncipe",
+      "Harry Potter e o Cálice de Fogo",
+      "Harry Potter e a Câmera Secreta",
+      "Harry Potter e a Ordem da Fênix",
+      "Harry Potter e o Prisioneiro de Azkaban",
+      "Harry Potter e as Relíquias da Morte",
+      "Torto Arado",
+      "O homem mais rico da Babilônia",
+      "Mulheres que correm com os lobos",
+      "A garota do lago",
+      "Percy Jackson - Ladrão de Raios",
+      "Percy Jackson - O mar de monstros",
+      "Percy Jackson - A maldição do Titã",
+      "Percy Jackson - A batalha do labirinto",
+      "Percy Jackson - O último olímpiano",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+
+
      ];
   
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/

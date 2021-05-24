@@ -22,14 +22,16 @@ function addComentario (commentIndividual) {
     let divComent = document.createElement("div"); 
     divComent.textContent = commentIndividual.data().comentario;
 
-    //botao
 
     
-    let apagar = document.createElement("button"); 
+    //botao
 
-    let icone = document.createElement("i"); 
-    icone.className = "fas fa-trash"; 
+   
+        let apagar = document.createElement("button"); 
 
+        let icone = document.createElement("i"); 
+        icone.className = "fas fa-trash"; 
+      
     //acrescentando
     apagar.appendChild(icone); 
 
@@ -39,11 +41,16 @@ function addComentario (commentIndividual) {
     lista_espaco_comentarios.appendChild(divMae); 
 
     //evento click no lixo
+
+
     apagar.addEventListener('click', e => {
         let id = e.target.parentElement.parentElement.getAttribute('id-coment'); 
         auth.onAuthStateChanged(user => {           
-            if (user){ 
+            if (user && commentIndividual.data().user == firebase.auth().currentUser.uid){ 
                 fs.collection('Comentarios').doc(id).delete();
+                console.log(commentIndividual.data().user);
+            }else{
+                console.log("Você não pode apagar este comentário!");
             }
         })
     })
@@ -65,17 +72,12 @@ campo_comentario.addEventListener('submit', e => {
                 id: '_' + id,                
                 user: user.uid,
                 comentario            
-            })
-            fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
-               const user = snapshot.data().user;   
-               if(user == firebase.auth().currentUser.uid) {
-                   var button = document.querySelector("button")
-                   button.classList.add("proibidoComentar");
+            })                  
         }else {
             console.log("Errou tudo kk");
         } 
-            })         
-        }
+                     
+        
         
     })
 })
@@ -101,6 +103,51 @@ campo_comentario.addEventListener('submit', e => {
          })
      }
  })
+
+
+//  auth.onAuthStateChanged(user => {
+//     const username = document.getElementById('username');
+//     if (user) {
+//         fs.collection('Comentarios').get().then((snapshot) => {
+//             const user = snapshot.data().user
+//             console.log(user);
+//         })
+//     }
+//     else {
+//         // console.log('user is not signed in to retrive username');
+//     }
+// })
+
+ //const user = snapshot.data().user;   
+//if(user == firebase.auth().currentUser.uid) {
+
+
+
+//  apagar.addEventListener('click', e => {
+//      let id = e.target.parentElement.parentElement.getAttribute('id-coment'); 
+//      auth.onAuthStateChanged(user => {           
+//          if (user){
+//             fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => { 
+//                 const user = snapshot.data().user; 
+//             })   
+//         if(snapshot.data().user == firebase.auth().currentUser.uid) {
+//             fs.collection('Comentarios').doc(id).delete();
+//         }else{
+//             console.log("Você não pode deletar");
+//         }
+
+             
+//          }
+//      })
+//  })
+
+
+
+
+
+
+
+
 
 
 
@@ -203,6 +250,20 @@ campo_comentario.addEventListener('submit', e => {
 //         }
 //         else {
 //             //console.log('user is not signed in to add comments');
+//         }
+//     })
+// })
+
+
+//DEU CERTO 
+// apagar.addEventListener('click', e => {
+//     let id = e.target.parentElement.parentElement.getAttribute('id-coment'); 
+//     auth.onAuthStateChanged(user => {           
+//         if (user && commentIndividual.data().user != firebase.auth().currentUser.uid){ 
+//             fs.collection('Comentarios').doc(id).delete();
+//             console.log(commentIndividual.data().user);
+//         }else{
+//             console.log("Você não pode apagar este comentário!");
 //         }
 //     })
 // })
