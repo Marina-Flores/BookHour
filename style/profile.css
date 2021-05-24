@@ -9,32 +9,37 @@
     background-color: #A020F0;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: [config] 50% [qntTotais] 50%
-}
+
 
 .config {
-    grid-column: config;
-    border: 1px solid #A020F0;
-    border-radius: 8px;
+       
     margin: 1rem 1rem;
     height: 100%;
 }
 
 
-.qntTotais {    
-    grid-column: qntTotais;
-    border-radius: 8px;
-    margin: 1rem 1rem;
-    height: 100%;
-}
 
 .welcome, .email{
     text-align: center;
     font-size: large;
 }
 
-.btn{
-    margin-top: 100%;
+a#modal.btn.btn-info.btn-lg{
+    border: none;
+    background: transparent;
+}
+
+.logout{
+    color: white;
+    font-size: 18px;
+}
+
+.sair{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
 }

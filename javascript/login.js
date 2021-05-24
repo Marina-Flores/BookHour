@@ -27,7 +27,7 @@ signupForm.addEventListener('submit', e => {
             Password: password
         }).then(() => {
             // console.log('success');
-            location = "../lista-livros/index.html";
+            location = "../views/lista-livros.html";
         }).catch(err => {
             // console.log(err.message);
             const signupError = document.getElementById('signupError');
@@ -49,7 +49,7 @@ loginForm.addEventListener('submit', e => {
      //console.log(loginEmail, loginPassword);
     auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
         //console.log('login success');
-        location = "../lista-livros/index.html";
+        location = "../views/lista-livros.html";
     }).catch(err => {
         const loginError = document.getElementById("loginError");
         loginError.innerText = err.message;

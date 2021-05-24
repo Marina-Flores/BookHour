@@ -6,8 +6,8 @@ auth.onAuthStateChanged(user => {
         console.log('user is signed in at users.html');
     }
     else {
-        alert('your login session has expired or you have logged out, login again to continue');
-        location = "../cadastro/cadastro.component.html";
+        alert('Você foi desconectado, faça o login para se reconectar');
+        location = "../views/login.html";
     }
 })
 
@@ -37,39 +37,13 @@ auth.onAuthStateChanged(user => {
     }
 })
 
-
-//vendo quantos elementos tem na lista de lidos
-auth.onAuthStateChanged(user => {
-    const quantidade = document.querySelector(".lidosTotal")
-    if(user) {
-        fs.collection('Livros lidos' + ' ' + user.uid).get().then(function(querySnapshot) {
-           
-                quantidade.innerHTML = 'Livros lidos: ' + querySnapshot.size;           
-            
-        })
-    }
-})
-
-//vendo quantos elementos tem na lista de lendo
-auth.onAuthStateChanged(user => {
-    const quantidade = document.querySelector(".lendoTotal")
-    if(user) {
-        fs.collection('Livros lendo' + ' ' + user.uid).get().then(function(querySnapshot) {
-           
-                quantidade.innerHTML = 'Livros em leitura: ' + querySnapshot.size;         
-            
-        })
-    }
-})
-
-//vendo quantos elementos tem na lista de lendo
-auth.onAuthStateChanged(user => {
-    const quantidade = document.querySelector(".desejadosTotal")
-    if(user) {
-        fs.collection('Livros desejados' + user.uid).get().then(function(querySnapshot) {
-           
-                quantidade.innerHTML = 'Livros em leitura: ' + querySnapshot.size;         
-            
-        })
-    }
+const logout = document.querySelector(".logout");    
+logout.addEventListener('click', function(){
+    firebase.auth().signOut()
+    .then(function(){
+        location = "../views/login.html";
+    })
+    .catch(function(error) {
+        //An error happened
+    })
 })

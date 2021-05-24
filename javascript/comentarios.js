@@ -1,0 +1,208 @@
+const lista_espaco_comentarios = document.getElementById('lista-espaco_comentarios'); 
+
+// checando se o usuário está logado
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('User logado');
+    }
+    else {
+        alert('Você foi desconectado, faça o login para se reconectar');
+        location = "../views/login.html";
+    }
+})
+
+// criando lista de comentarios // 
+function addComentario (commentIndividual) {
+    //div pai
+    let divMae = document.createElement("div"); 
+    divMae.className = "espaco caixa-comentarios";
+    divMae.setAttribute('id-coment', commentIndividual.id); 
+
+    //div comentarios
+    let divComent = document.createElement("div"); 
+    divComent.textContent = commentIndividual.data().comentario;
+
+    //botao
+
+    
+    let apagar = document.createElement("button"); 
+
+    let icone = document.createElement("i"); 
+    icone.className = "fas fa-trash"; 
+
+    //acrescentando
+    apagar.appendChild(icone); 
+
+    divMae.appendChild(divComent); 
+    divMae.appendChild(apagar); 
+
+    lista_espaco_comentarios.appendChild(divMae); 
+
+    //evento click no lixo
+    apagar.addEventListener('click', e => {
+        let id = e.target.parentElement.parentElement.getAttribute('id-coment'); 
+        auth.onAuthStateChanged(user => {           
+            if (user){ 
+                fs.collection('Comentarios').doc(id).delete();
+            }
+        })
+    })
+     
+}
+
+//adicionando comentarios no database firestore
+const campo_comentario = document.getElementById('campo_comentario'); 
+
+
+campo_comentario.addEventListener('submit', e => {
+    e.preventDefault(); 
+    const comentario = campo_comentario['comentario'].value;
+    let id = counter += 1;
+    campo_comentario.reset(); 
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            fs.collection('Comentarios').doc('_' + id).set({
+                id: '_' + id,                
+                user: user.uid,
+                comentario            
+            })
+            fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
+               const user = snapshot.data().user;   
+               if(user == firebase.auth().currentUser.uid) {
+                   var button = document.querySelector("button")
+                   button.classList.add("proibidoComentar");
+        }else {
+            console.log("Errou tudo kk");
+        } 
+            })         
+        }
+        
+    })
+})
+
+
+    
+
+ //realtime listeners 
+ auth.onAuthStateChanged(user => {
+     if (user){
+        fs.collection('Comentarios').onSnapshot((snapshot) => {
+             let edicoes = snapshot.docChanges();
+             edicoes.forEach(edicao => {
+                 if (edicao.type == "added") {
+                    addComentario(edicao.doc); 
+                    }
+                    else if(edicao.type == "removed") {
+                        let a = lista_espaco_comentarios.querySelector('[id-coment =' + edicao.doc.id + ']'); 
+                        lista_espaco_comentarios.removeChild(a); 
+                    }
+
+             })
+         })
+     }
+ })
+
+
+
+//  if (user) { 
+//  fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
+//     const user = snapshot.data().user;
+//     console.log(user);
+//  })
+
+// }
+
+// fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
+//     const user = snapshot.data().user;
+//     console.log(user);
+//  })
+//  if (snapshot.data().user == user.uid){
+//     console.log("Você não pode apagar este comentário");
+//  }else{
+//      console.log("Você pode apagar!");
+//  }
+
+
+// auth.onAuthStateChanged(user => {
+//     const email = document.getElementById('email');
+//     if (user) {
+//         fs.collection('users').doc(user.uid).get().then((snapshot) => {
+//             // console.log(snapshot.data().Name);
+//             useruid = snapshot.data().user.uid;
+//         })
+//     }
+//     else {
+//         // console.log('user is not signed in to retrive username');
+//     }
+// })
+
+// if(user === firebase.auth().currentUser.uid){
+//     console.log("Você pode apagar o comentário!")
+// } else {
+//     console.log("Você não pode apagar!");
+// }
+
+// fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
+//     const user = snapshot.data().user;
+//    // console.log(user);  
+//    // console.log(firebase.auth().currentUser.uid);              
+//  })
+
+
+// function verificaPermissao (){
+//     fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
+//             const user = snapshot.data().user;
+//             console.log(user);  
+//              console.log(firebase.auth().currentUser.uid);              
+//   })
+//   if(user) {
+//     if(user === firebase.auth().currentUser.uid){
+//         console.log("Você pode apagar o comentário!")
+//      } else {
+//          console.log("Você não pode apagar!");
+//  }
+//   }
+ 
+// }
+
+// console.log(verificaPermissao());
+
+
+
+
+
+
+
+
+
+// campo_comentario.addEventListener('submit', e => {
+//     e.preventDefault(); 
+//     const comentario = campo_comentario['comentario'].value;
+//     let id = counter += 1;
+//     campo_comentario.reset(); 
+//     auth.onAuthStateChanged(user => {
+//         if(user) {
+//             fs.collection('Comentarios').doc('_' + id).set({
+//                 id: '_' + id,                
+//                 user: user.uid,
+//                 comentario            
+//             }).then( ()=> {
+//                 console.log("comentario add com sucesso");
+//             }).catch(err => {
+//                 console.log(err.message);
+//             })
+//             fs.collection('Comentarios User').doc('_' + id).set({
+//                 id: '_' + id,
+//                 comentario
+//             }).then( ()=> {
+//                 console.log('Comentário adicionado com sucesso!');
+               
+//             }).catch(err => {
+//                 console.log(err.message);
+//             })
+//         }
+//         else {
+//             //console.log('user is not signed in to add comments');
+//         }
+//     })
+// })

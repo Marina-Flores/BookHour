@@ -1,5 +1,16 @@
 const lista_espaco = document.getElementById('lista-espaco');
 
+// checando se o usuário está logado
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('user is signed in at users.html');
+    }
+    else {
+        alert('Você foi desconectado, faça o login para se reconectar');
+        location = "../views/login.html";
+    }
+})
+
 // Criando lista de livros lendo //
 function renderizarDados (docIndividual){
     // div pai
