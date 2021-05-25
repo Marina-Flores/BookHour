@@ -59,6 +59,8 @@ campo_comentario.addEventListener('submit', e => {
                 id: '_' + id,                
                 user: user.uid,
                 comentario            
+            }).then( () => {
+                alert("Comentário adicionado")
             })                  
         }else {
             console.log("Errou tudo kk");

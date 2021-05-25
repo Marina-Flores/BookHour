@@ -9,7 +9,7 @@
                     id: '_' + id, 
                     lido_button
                 }).then ( () => {
-                    console.log('livro adicionado');
+                    alert('livro adicionado');
                 }).catch(err => {
                     console.log(err.message);
                 })

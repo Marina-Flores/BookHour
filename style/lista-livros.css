@@ -43,31 +43,52 @@ body {
 
   h3 {
     color: #20263f;
-    font-family: "Dosis", sans-serif;
-    
+    font-family: "Dosis", sans-serif;    
   }
 
-  .btnAdd {
-    background-color: #A020F0;
+  #HP1_desejo, #HP1_lendo, #HP1_lido{
+    background: #a948e6;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 5px 2px 2px rgb(106, 26, 138);
+    margin-left: 1rem;
+    } 
+
+.btnAdd {
+    background-color: #a948e6;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
-    padding: 12px 45px;
+    padding: 12px 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 input[type=search] {
   border: 1px solid transparent;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 6px;
   font-size: 16px;
 }
 
+.addComentario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 input[type=submit] {
   background-color: rgb(191, 30, 255);
-  color: #fff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
   cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
 }
 
 .caixa-comentarios{
@@ -208,6 +229,7 @@ input[type=submit] {
     font-size: 10px;
     width: 90%;
     border: none;
+    margin-right: 1rem;
   }
   
   

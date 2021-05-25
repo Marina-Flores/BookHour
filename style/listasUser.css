@@ -79,25 +79,32 @@
   }
 
   /* Autocomplete search*/
-   
-  .desejadosAdd, .campo__busca-desktop, .lidosAdd{  
-    height: 30px;
-    width: 40%;
+    
+  #form, #campo, #campo_lidos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  
-  input[type=search] {
+
+   input[type=search] {
     border: 1px solid transparent;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding: 6px;
     font-size: 16px;
   }
   
   
   input[type=submit] {
     background-color: rgb(191, 30, 255);
-    color: #fff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
     cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  
   }
   
   .autocomplete-items {
@@ -151,12 +158,12 @@
   text-align: center;
 }
 
-.qntDesejados, .qntLendo{
+.qntLidos, .qntLendo{
   margin-left: 1rem;
   text-align: center;
 }
 
-.qntLidos {
+.qntDesejados {
   text-align: center;
 }
 
