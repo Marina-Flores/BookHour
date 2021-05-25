@@ -70,6 +70,24 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.caixa-comentarios{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4e4e4;
+    margin: 3px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.caixa-comentarios button {
+    color: red;
+    border: hidden;
+    outline: none !important;
+    cursor: pointer;
+}
+
 
   .cards {
     display: flex;

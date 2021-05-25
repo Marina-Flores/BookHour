@@ -39,7 +39,7 @@
       text-transform: uppercase;
   }
   
-  .todo-box, .caixa-lista, .caixa_lidos {
+  .todo-box, .caixa-lista, .caixa_lidos{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +52,7 @@
   
   }
   
-  .todo-box button, .caixa-lista button, .caixa_lidos button {
+  .todo-box button, .caixa-lista button, .caixa_lidos button{
     color: red;
     border: hidden;
     outline: none !important;
