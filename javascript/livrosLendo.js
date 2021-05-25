@@ -20,7 +20,7 @@ function renderizarDados (docIndividual){
 
     //div lista
     let divLista = document.createElement("div");
-    divLista.textContent = docIndividual.data().lendo;
+    divLista.textContent = docIndividual.data().lendo || docIndividual.data().lendo_button;
 
     //botao
     let lixo = document.createElement("button");    

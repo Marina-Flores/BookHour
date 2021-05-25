@@ -1,5 +1,6 @@
 const lista_espaco_lidos = document.getElementById('lista-espaco_lidos');
 
+
 // Adicionando na lista de livros lidos // 
 
 function renderizar_dados (doc_Individual) {
@@ -10,8 +11,7 @@ function renderizar_dados (doc_Individual) {
 
     //div lista
     let listaDiv = document.createElement("div");
-    listaDiv.textContent = doc_Individual.data().lido; 
-
+    listaDiv.textContent = doc_Individual.data().lido || doc_Individual.data().lido_button ; 
     //botao
     let lixeira = document.createElement("button"); 
 
@@ -21,10 +21,11 @@ function renderizar_dados (doc_Individual) {
     //acrescentando
     lixeira.appendChild(iii); 
 
-    paiDiv.appendChild(listaDiv); 
+    paiDiv.appendChild(listaDiv);
+ 
     paiDiv.appendChild(lixeira);
 
-    lista_espaco_lidos.appendChild(paiDiv); 
+     lista_espaco_lidos.appendChild(paiDiv); 
 
     //evento click na lixeira
     lixeira.addEventListener('click', e => {
@@ -36,7 +37,7 @@ function renderizar_dados (doc_Individual) {
         })
     })
 }
-
+    
     //adicionando lista no database firestore
     const campo_lidos = document.getElementById('campo_lidos');
 
@@ -62,21 +63,20 @@ function renderizar_dados (doc_Individual) {
         })
     })
 
-
-    //realtime listners
-    auth.onAuthStateChanged(user => {
-        if(user){
-            fs.collection('Livros lidos' + ' ' + user.uid).onSnapshot((snapshot) => {
-                let alteracoes = snapshot.docChanges(); 
-                alteracoes.forEach(alteracao => {
-                    if (alteracao.type == "added") {
-                        renderizar_dados(alteracao.doc);
-                    }
-                    else if(alteracao.type == 'removed') {
-                        let liii = lista_espaco_lidos.querySelector('[dados-id =' + alteracao.doc.id + ']');
-                        lista_espaco_lidos.removeChild(liii);
-                    }
+        //realtime listners
+        auth.onAuthStateChanged(user => {
+            if(user){
+                fs.collection('Livros lidos' + ' ' + user.uid).onSnapshot((snapshot) => {
+                    let alteracoes = snapshot.docChanges(); 
+                    alteracoes.forEach(alteracao => {
+                        if (alteracao.type == "added") {
+                            renderizar_dados(alteracao.doc);
+                        }
+                        else if(alteracao.type == 'removed') {
+                            let liii = lista_espaco_lidos.querySelector('[dados-id =' + alteracao.doc.id + ']');
+                            lista_espaco_lidos.removeChild(liii);
+                        }
+                    })
                 })
-            })
-        }
-    })
+            }
+        })

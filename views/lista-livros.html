@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/lista-livros.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="../views/listasUser.html"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -32,8 +33,7 @@
         </header>
 
 <main>
-  
-  <div class="seila">
+   <div class="seila">
     <h1 tabindex="0" id="title">Lista de livros</h1>
 
     <h3 class="text_filter">Procure pelo nome do livre</h3>
@@ -69,6 +69,10 @@
                 <p class="autor">Autor(a): Emma Watson</p>
                 <p>Harry Potter e a Pedra Filosofal é o primeiro dos sete livros da série de fantasia Harry Potter, escrita por J. K. Rowling. O livro conta a história de Harry Potter, um órfão criado pelos tios que descobre, em seu décimo primeiro aniversário, que é um bruxo.</p>
               </div>
+              <button id="HP1_desejo">Quero ler!</button>
+              <button id="HP1_lendo">Estou lendo!</button>
+              <button id="HP1_lido">Já li!</button>
+
               <div class="espaco_comentarios">
                 <h3>Adicionar um comentário</h3>
             
@@ -80,6 +84,7 @@
                   </div>
             
                   <div class="comentarios" id="lista-espaco_comentarios">      
+                    <ul id="messages"></ul>
                   </div>     
                </div>
               <div class="modal-footer">
@@ -378,9 +383,15 @@
      const fs = firebase.firestore();
      const db = firebase.firestore();
    </script>
-
+    
     <script src="../javascript/filtraLista.js"></script>
-    <script src="../javascript/comentarios.js"></script>
+    <script src="../javascript/counter.js"></script>
 
+    <script src="../javascript/livrosDesejados.js"></script>
+
+    <script src="../javascript/livrosLidos_button.js"></script>
+
+    <script src="../javascript/livrosLendo_button.js"></script>
+   
 </body>
 </html>

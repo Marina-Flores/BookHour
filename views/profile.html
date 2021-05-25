@@ -28,10 +28,13 @@
         <p class="welcome">Olá, <span id="username"></span></p>  
         <p class="email"><span id="email"></span></p>  
     </div>
-
+      <div class="field">
+        <img src="http://via.placeholder.com/150" class="ui image centered" id="img" >
+        <input type="file" onchange='chooseFile(event)'>
+      </div>
       <div class="sair">
       <a class="logout">Sair</a>
-   </div>
+     </div>
   </header>
 
     <main class="grid">
@@ -40,10 +43,26 @@
           <a>Redefinir Email</a>
           <a>Redefinir senha</a>
           <a>Redefinir username</a>
-          <a>Excluir conta</a>
+          <a class="excluir_conta">Excluir conta</a>
           </div>
      </section>
 
+     <section class="redefinir_dados">
+
+      <div class="form-container sign-up-container">
+
+        <form autocomplete="off" class="form-group" id="form_update__email">                
+          
+          <input class="form-control" type="email" id="email_update" placeholder="Email" required/>
+          
+          <button type="submit">Salvar</button>
+        </form>
+        <div class="container error" id="signupError"></div>
+        <div class="container error" id="signupError2"></div>
+      </div>
+
+
+     </section>
     
     </main>
    

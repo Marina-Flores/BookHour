@@ -1,16 +1,5 @@
 const lista_espaco_comentarios = document.getElementById('lista-espaco_comentarios'); 
-
-// checando se o usuário está logado
-auth.onAuthStateChanged(user => {
-    if (user) {
-        console.log('User logado');
-    }
-    else {
-        alert('Você foi desconectado, faça o login para se reconectar');
-        location = "../views/login.html";
-    }
-})
-
+ 
 // criando lista de comentarios // 
 function addComentario (commentIndividual) {
     //div pai
@@ -104,7 +93,6 @@ campo_comentario.addEventListener('submit', e => {
      }
  })
 
-
 //  auth.onAuthStateChanged(user => {
 //     const username = document.getElementById('username');
 //     if (user) {
@@ -140,16 +128,6 @@ campo_comentario.addEventListener('submit', e => {
 //          }
 //      })
 //  })
-
-
-
-
-
-
-
-
-
-
 
 //  if (user) { 
 //  fs.collection('Comentarios').doc('_' + id).get().then( (snapshot) => {
@@ -213,15 +191,6 @@ campo_comentario.addEventListener('submit', e => {
 // }
 
 // console.log(verificaPermissao());
-
-
-
-
-
-
-
-
-
 // campo_comentario.addEventListener('submit', e => {
 //     e.preventDefault(); 
 //     const comentario = campo_comentario['comentario'].value;

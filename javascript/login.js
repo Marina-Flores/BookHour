@@ -20,7 +20,6 @@ signupForm.addEventListener('submit', e => {
     // console.log(name, email, password);
     signupForm.reset();
     auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-        // console.log(cred);
         return db.collection('users').doc(cred.user.uid).set({
             Name: name,
             Email: email,

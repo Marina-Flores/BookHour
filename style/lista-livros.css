@@ -46,6 +46,31 @@ body {
     font-family: "Dosis", sans-serif;
     
   }
+
+  .btnAdd {
+    background-color: #A020F0;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+input[type=search] {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+input[type=submit] {
+  background-color: rgb(191, 30, 255);
+  color: #fff;
+  cursor: pointer;
+}
+
+
   .cards {
     display: flex;
     flex-wrap: wrap;

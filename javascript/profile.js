@@ -37,6 +37,7 @@ auth.onAuthStateChanged(user => {
     }
 })
 
+// Logout //
 const logout = document.querySelector(".logout");    
 logout.addEventListener('click', function(){
     firebase.auth().signOut()
@@ -48,4 +49,14 @@ logout.addEventListener('click', function(){
     })
 })
 
+// Excluir conta // 
+const excluir = document.querySelector(".excluir_conta"); 
+excluir.addEventListener('click', function(){
+    var user = firebase.auth().currentUser;
+    user.delete().then(function() {        
+        location = "../views/login.html";
+      }).catch(function(error) {
+        // An error happened.
+      });
+})
 
