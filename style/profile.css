@@ -1,45 +1,210 @@
+/* Editing profile data */
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;    
-}
-
-.bio {
     margin: 0;
-    background-color: #A020F0;
+    font-family:  "Montserrat", sans-serif;
 }
 
+header {
+    background: #a020f0;
+    padding: 20px 0;
+    height: auto;
+  }
 
-
-.config {
-       
-    margin: 1rem 1rem;
-    height: 100%;
-}
-
-
-
-.welcome, .email{
+  
+  nav {   
+    top: 110px;
+    right: 0;
     text-align: center;
-    font-size: large;
+  }
+  
+  nav li {
+    display: inline;
+    margin: 2rem 1rem;
+  }
+  
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  nav a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+main {
+    width: 100vw
 }
 
-a#modal.btn.btn-info.btn-lg{
-    border: none;
-    background: transparent;
-}
-
-.logout{
-    color: white;
-    font-size: 18px;
-}
-
-.sair{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.container {
+.container,
+main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+fieldset {
+    border:  2px solid rgba(164, 45, 194, 0.775);
+  
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.12);
+    width: 90vw;
+}
+
+h3 {
+    text-align: center;
+}
+
+input[type = "text"],
+input[type = "password"],
+input[type = "email"] {
+    width: 80vw;
+    margin-top: 8px;
+    padding: 2px 6px;
+    border: none;
+    background-color: #f7f7f7;
+    height: 40px;
+    outline-color: #A020F0;
+    font-size: 1rem
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+button:last-of-type, button {    
+    margin: 20px 1px 0px 0px;
+    padding: 10px 20px;
+
+}
+
+button, button + button:hover {  
+    
+    background-color: #2196f3;
+    color: white;
+    border: 1px solid #2196f3;
+    cursor: pointer;
+
+
+}
+
+button:first-of-type {
+    background-color: white;
+    color: red;
+    border: red 1px solid;
+    margin: 20px 42px 0px 0px;
+    
+
+}
+
+button + button {
+    background-color: white;
+    color: #2196f3;
+}
+
+.clear {
+    clear: both
+}
+
+button:first-of-type:hover {
+    background-color: red;
+    color: white;
+    border: 1px red solid;
+}
+
+button {
+    margin-right: 5px
+}
+
+.container div {
+    margin: 10px 20px;
+    position: relative
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block
+}
+
+.edit-container div:first-of-type {   
+    width: 90vw;
+    margin-top: 20px;
+}
+
+label {
+    position: absolute;
+    top: 56%;
+    left: 6px;
+    color: #505050
+}
+
+.focused-field {
+    animation-name: gainFocus;
+    animation-fill-mode: forwards;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-out
+}
+
+@keyframes gainFocus {
+    0% {
+        top: 56%;
+        left: 6px;
+        color: #505050;
+        font-size: 1rem
+    }
+    100% {
+        top: 0%;
+        left: 0px;
+        color: #A020F0;
+        font-size: 0.9rem
+    }
+}
+
+.unfocused-field {
+    animation-name: loseFocus;
+    animation-fill-mode: forwards;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-out
+}
+
+@keyframes loseFocus {
+    0% {
+        top: 0%;
+        left: 0px;
+        color: #A020F0;
+        font-size: 0.9rem
+    }
+    100% {
+        top: 56%;
+        left: 6px;
+        color: #505050;
+        font-size: 1rem
+    }
+}
+
+.initial-focused-field {
+    top: 0%;
+    left: 0px;
+    color: #A020F0;
+    font-size: 0.9rem
+}
+
+.initial-unfocused-field {
+    top: 56%;
+    left: 6px;
+    color: #505050;
+    font-size: 1rem
+}
+

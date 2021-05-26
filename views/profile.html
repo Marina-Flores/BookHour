@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minhas Listas</title>
+
     <!-- css -->
     <link rel="stylesheet" href="../style/profile.css">
 
@@ -23,53 +24,54 @@
 
 <body>
 
-  <header class="bio">
-    <div class="header">
-        <p class="welcome">Olá, <span id="username"></span></p>  
-        <p class="email"><span id="email"></span></p>  
-    </div>
-      <div class="field">
-        <img src="http://via.placeholder.com/150" class="ui image centered" id="img" >
-        <input type="file" onchange='chooseFile(event)'>
-      </div>
-      <div class="sair">
-      <a class="logout">Sair</a>
-     </div>
+  <header>
+    <div class="box">
+      <div class="logo">
+          <img class="logoBookHour" src="../img/logo1.png" alt="Logo da Book Hour" style="height: auto; display: block; margin: 0 auto;">
+        </div>
+     
+        <nav>
+          <ul>
+              <li><a href="lista-livros.html">Home</a></li>
+              <li><a href="./listasUser.html">Minhas listas</a></li>
+              <li><a href="./profile.html">Configurações</a></li>
+          </ul>
+      </nav>
+  </div>
+         
   </header>
 
-    <main class="grid">
-      <section class="config">
-        <div class="container">
-          <a>Redefinir Email</a>
-          <a>Redefinir senha</a>
-          <a>Redefinir username</a>
-          <a class="excluir_conta">Excluir conta</a>
+    <main class="grid">    
+
+      <section class="container edit-container">
+        <fieldset>
+         <h3>Alterar dados</h3>
+          <div>
+            <label for="mail">Email</label> <br>
+            <input type="email" id="mail" name="mail"/>
           </div>
-     </section>
-
-     <section class="redefinir_dados">
-
-      <div class="form-container sign-up-container">
-
-        <form autocomplete="off" class="form-group" id="form_update__email">                
+          <div>
+            <label for="password">Senha</label> <br>
+            <input type="password" id="password" name="password"/> <br>
+          </div>
+          <div>
+            <label for="displayName">Nome</label> <br>
+            <input type="text" id="displayName" name="displayName"/> <br>
+          </div>
           
-          <input class="form-control" type="email" id="email_update" placeholder="Email" required/>
-          
-          <button type="submit">Salvar</button>
-        </form>
-        <div class="container error" id="signupError"></div>
-        <div class="container error" id="signupError2"></div>
-      </div>
+          <div class="buttons">
+            <button id="delete">Deletar conta</button>  
+          <button id="edit">Salvar</button>
+          <!-- <button id="back">Back</button> -->            
+        </div>
+        </fieldset>
+      </section> 
 
-
-     </section>
+     
+    
     
     </main>
-   
-
-<script>
-  
-</script>
+ 
 
 
 
