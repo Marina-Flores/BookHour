@@ -41,17 +41,7 @@ auth.onAuthStateChanged(user => {
 //      }
 //  })
 
-// // Logout //
-// const logout = document.querySelector(".logout");    
-// logout.addEventListener('click', function(){
-//     firebase.auth().signOut()
-//     .then(function(){
-//         location = "../views/login.html";
-//     })
-//     .catch(function(error) {
-//         //An error happened
-//     })
-// })
+
 
 // // Excluir conta // 
 // const excluir = document.querySelector(".excluir_conta"); 
@@ -180,13 +170,23 @@ const deleteAccount = () => {
     })
 }
 
+
+
 deleteButton.addEventListener('click', deleteAccount);
 
 editButton.addEventListener('click', editInformation,);
 
-// backButton.addEventListener('click', () => {
-//     window.location.assign('../views/lista-livros.html');
-// });
+ // Logout //
+ const logout = document.querySelector(".logout");    
+ logout.addEventListener('click', function(){
+     firebase.auth().signOut()
+     .then(function(){
+         location = "../views/login.html";
+    })
+     .catch(function(error) {
+         //Algo deu errado
+             })
+ }) 
 
 //Animations
 mailField.addEventListener('focus', () => {

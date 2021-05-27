@@ -1,3 +1,9 @@
+const backButton = document.querySelector(".voltar");
+
+backButton.addEventListener('click', () => {
+     window.location.assign('../views/lista-livros.html');
+ });
+
 
 //vendo quantos elementos tem na lista de lidos
 // retriving username

@@ -91,7 +91,7 @@ input[type=submit] {
 
 }
 
-.caixa-comentarios{
+.caixa-comentarios, .caixa-comentarios_hp2{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,7 +102,7 @@ input[type=submit] {
     font-weight: 600;
 }
 
-.caixa-comentarios button {
+.caixa-comentarios button, .caixa-comentarios_hp2 button {
     color: red;
     border: hidden;
     outline: none !important;
@@ -182,7 +182,9 @@ input[type=submit] {
   p {
     line-height: 21px;
   }
-  
+  .descricao{
+    text-align: justify;
+  }
   .cards__front,
   .cards__back {
     -webkit-backface-visibility: hidden;
@@ -192,8 +194,7 @@ input[type=submit] {
   }
   .cards__front {
     height: 100%;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
+    
   }
   
   .cards__back {
@@ -218,10 +219,6 @@ input[type=submit] {
   }
   .cards__year {
       margin-top: 50px;
-  }
-
-  .invisivel {
-    display: none;
   }
 
   .btn.btn-info.btn-lg.btn_modal{

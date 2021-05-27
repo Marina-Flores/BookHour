@@ -1,5 +1,5 @@
 const lista_espaco_comentarios = document.getElementById('lista-espaco_comentarios'); 
- 
+
 // criando lista de comentarios // 
 function addComentario (commentIndividual) {
     //div pai
@@ -27,21 +27,19 @@ function addComentario (commentIndividual) {
 
     lista_espaco_comentarios.appendChild(divMae); 
 
+
     //evento click no lixo
-
-
     apagar.addEventListener('click', e => {
         let id = e.target.parentElement.parentElement.getAttribute('id-coment'); 
         auth.onAuthStateChanged(user => {           
             if (user && commentIndividual.data().user == firebase.auth().currentUser.uid){ 
                 fs.collection('Comentarios').doc(id).delete();
-                console.log(commentIndividual.data().user);
+                console.log(commentIndividual.data().user);                
             }else{
-                console.log("Você não pode apagar este comentário!");
+                console.log("Você não pode apagar este comentário!");                
             }
         })
-    })
-     
+    })     
 }
 
 //adicionando comentarios no database firestore
@@ -64,12 +62,12 @@ campo_comentario.addEventListener('submit', e => {
             })                  
         }else {
             console.log("Errou tudo kk");
-        } 
-                     
+        }    
         
         
     })
-})   
+})  
+
 
  //realtime listeners 
  auth.onAuthStateChanged(user => {

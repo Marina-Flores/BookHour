@@ -11,7 +11,6 @@ header {
     height: auto;
   }
 
-  
   nav {   
     top: 110px;
     right: 0;
@@ -88,17 +87,8 @@ button:last-of-type, button {
 
 }
 
-button, button + button:hover {  
-    
-    background-color: #2196f3;
-    color: white;
-    border: 1px solid #2196f3;
-    cursor: pointer;
 
-
-}
-
-button:first-of-type {
+ #delete, .logout{
     background-color: white;
     color: red;
     border: red 1px solid;
@@ -106,24 +96,25 @@ button:first-of-type {
     
 
 }
-
-button + button {
+ #edit {
     background-color: white;
     color: #2196f3;
+    border: 1px solid #2196f3;
+    cursor: pointer;
+    margin-left: 64vw;
 }
 
 .clear {
     clear: both
 }
 
-button:first-of-type:hover {
-    background-color: red;
-    color: white;
-    border: 1px red solid;
-}
 
 button {
     margin-right: 5px
+}
+
+.logout{
+    margin-left: 64vw;
 }
 
 .container div {
