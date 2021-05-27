@@ -213,9 +213,10 @@ input[type=submit] {
   }
   
   .autor {
-    font-size: 30px;
+      font-size: 20px;
       margin-bottom: 20px;   
       margin-top: 10px;
+      text-align: center;
   }
   .cards__year {
       margin-top: 50px;
@@ -229,6 +230,9 @@ input[type=submit] {
     margin-right: 1rem;
   }
   
+  .invisivel {
+    display: none;
+  }
   
    /*Desktop*/
   /* nav a:hover {

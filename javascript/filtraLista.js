@@ -1,6 +1,5 @@
 var campoFiltro = document.querySelector("#filtrar-tabela");
 campoFiltro.addEventListener("input", function(){
-    console.log(this.value);
     var cards = document.querySelectorAll(".cards__single");
     
     if(this.value.length > 0){
