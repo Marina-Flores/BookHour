@@ -28,26 +28,26 @@ function renderizarDados (docIndividual){
     || docIndividual.data().HP5_lendo 
     || docIndividual.data().HP6_lendo 
     || docIndividual.data().HP7_lendo
-    || individualDoc.data().tortoArado_lendo
-    || individualDoc.data().homemBabilonia_lendo
-    || individualDoc.data().garotaLago_lendo
-    || individualDoc.data().mulheresLobo_lendo
-    || individualDoc.data().PJ1_lendo
-    || individualDoc.data().PJ2_lendo
-    || individualDoc.data().PJ3_lendo
-    || individualDoc.data().PJ4_lendo
-    || individualDoc.data().PJ5_lendo
-    || individualDoc.data().revolucaoBichos_lendo
-    || individualDoc.data().livro1984_lendo
-    || individualDoc.data().handmaids_lendo
-    || individualDoc.data().milagreManha_lendo  
-    || individualDoc.data().poderAcao_lendo
-    || individualDoc.data().mindset_lendo
-    || individualDoc.data().poderHabito_lendo
-    || individualDoc.data().mentirosos_lendo
-    || individualDoc.data().sutilArte_lendo
-    || individualDoc.data().manualAntirracista_lendo
-    || individualDoc.data().coragemImperfeito_lendo;
+    || docIndividual.data().tortoArado_lendo
+    || docIndividual.data().homemBabilonia_lendo
+    || docIndividual.data().garotaLago_lendo
+    || docIndividual.data().mulheresLobo_lendo
+    || docIndividual.data().PJ1_lendo
+    || docIndividual.data().PJ2_lendo
+    || docIndividual.data().PJ3_lendo
+    || docIndividual.data().PJ4_lendo
+    || docIndividual.data().PJ5_lendo
+    || docIndividual.data().revolucaoBichos_lendo
+    || docIndividual.data().livro1984_lendo
+    || docIndividual.data().handmaids_lendo
+    || docIndividual.data().milagreManha_lendo  
+    || docIndividual.data().poderAcao_lendo
+    || docIndividual.data().mindset_lendo
+    || docIndividual.data().poderHabito_lendo
+    || docIndividual.data().mentirosos_lendo
+    || docIndividual.data().sutilArte_lendo
+    || docIndividual.data().manualAntirracista_lendo
+    || docIndividual.data().coragemImperfeito_lendo;
 
     //botao
     let lixo = document.createElement("button");    

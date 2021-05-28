@@ -159,7 +159,7 @@
      let id = counter += 1; 
      auth.onAuthStateChanged(user => {
          if(user) {
-             fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+             fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                  id: '_' + id, 
                  tortoArado_lido
              }).then ( () => {
@@ -180,7 +180,7 @@
      let id = counter += 1; 
      auth.onAuthStateChanged(user => {
          if(user) {
-             fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+             fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                  id: '_' + id, 
                  homemBabilonia_lido
              }).then ( () => {
@@ -201,7 +201,7 @@
       let id = counter += 1; 
       auth.onAuthStateChanged(user => {
           if(user) {
-              fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+              fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                   id: '_' + id, 
                   garotaLago_lido
               }).then ( () => {
@@ -222,7 +222,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    mulheresLobo_lido
                }).then ( () => {
@@ -243,7 +243,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    PJ1_lido
                }).then ( () => {
@@ -260,11 +260,11 @@
        //adicionando  Percy Jackson - O mar de monstros pelo button no database firestore
        const PJ2_lido = document.getElementById('PJ2_lido');
        PJ2_lido.addEventListener('click', function(){
-           const PJ2_lidoo = "Percy Jackson - O mar de monstros";
+           const PJ2_lido = "Percy Jackson - O mar de monstros";
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    PJ2_lido
                }).then ( () => {
@@ -285,7 +285,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    PJ3_lido
                }).then ( () => {
@@ -306,7 +306,7 @@
          let id = counter += 1; 
          auth.onAuthStateChanged(user => {
              if(user) {
-                 fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                 fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                      id: '_' + id, 
                      PJ4_lido
                  }).then ( () => {
@@ -327,7 +327,7 @@
           let id = counter += 1; 
           auth.onAuthStateChanged(user => {
               if(user) {
-                  fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                  fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                       id: '_' + id, 
                       PJ5_lido
                   }).then ( () => {
@@ -348,7 +348,7 @@
            let id = counter += 1; 
            auth.onAuthStateChanged(user => {
                if(user) {
-                   fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                   fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                        id: '_' + id, 
                        revolucaoBichos_lido
                    }).then ( () => {
@@ -369,7 +369,7 @@
            let id = counter += 1; 
            auth.onAuthStateChanged(user => {
                if(user) {
-                   fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                   fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                        id: '_' + id, 
                        livro1984_lido
                    }).then ( () => {
@@ -390,7 +390,7 @@
             let id = counter += 1; 
             auth.onAuthStateChanged(user => {
                 if(user) {
-                    fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                    fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                         id: '_' + id, 
                         handmaids_lido
                     }).then ( () => {
@@ -411,7 +411,7 @@
             let id = counter += 1; 
             auth.onAuthStateChanged(user => {
                 if(user) {
-                    fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                    fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                         id: '_' + id, 
                         milagreManha_lido
                     }).then ( () => {
@@ -432,7 +432,7 @@
              let id = counter += 1; 
              auth.onAuthStateChanged(user => {
                  if(user) {
-                     fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                     fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                          id: '_' + id, 
                          poderAcao_lido
                      }).then ( () => {
@@ -448,12 +448,12 @@
 
              //adicionando Mindset: a nova psicologia do sucesso pelo button no database firestore
              const mindset_lido = document.getElementById('mindset_lido');
-             mindset_lidoo.addEventListener('click', function(){
+             mindset_lido.addEventListener('click', function(){
                  const mindset_lido = "Mindset: a nova psicologia do sucesso";
              let id = counter += 1; 
              auth.onAuthStateChanged(user => {
                  if(user) {
-                     fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                     fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                          id: '_' + id, 
                          mindset_lido
                      }).then ( () => {
@@ -474,7 +474,7 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           poderHabito_lido
                       }).then ( () => {
@@ -495,7 +495,7 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           sutilArte_lido
                       }).then ( () => {
@@ -516,7 +516,7 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           manualAntirracista_lido
                       }).then ( () => {
@@ -537,11 +537,32 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lidos' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           coragemImperfeito_lido
                       }).then ( () => {
                           alert('A coragem de ser imperfeito adicionado à lista de lidos'); 
+                      }).catch(err => {
+                          console.log(err.message);
+                      })
+                  }else {
+                      //console.log('user is not signed in to add livros')
+                  }
+              })
+              })
+
+              //adicionando Mentirosos pelo button no database firestore
+              const mentirosos_lido = document.getElementById('mentirosos_lido');
+              mentirosos_lido.addEventListener('click', function(){
+                  const mentirosos_lido = "Mentirosos";
+              let id = counter += 1; 
+              auth.onAuthStateChanged(user => {
+                  if(user) {
+                      fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
+                          id: '_' + id, 
+                          mentirosos_lido
+                      }).then ( () => {
+                          alert('Mentirosos adicionado à lista de lidos'); 
                       }).catch(err => {
                           console.log(err.message);
                       })

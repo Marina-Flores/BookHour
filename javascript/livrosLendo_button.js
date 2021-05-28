@@ -5,7 +5,7 @@
         let id = counter += 1;
         auth.onAuthStateChanged(user => {
             if(user) {
-                fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                     id: '_' + id, 
                     lendo_button
                 }).then ( () => {
@@ -27,7 +27,7 @@
         let id = counter += 1;
         auth.onAuthStateChanged(user => {
             if(user){
-                fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                     id: '_' + id, 
                     HP2_lendo
                 }).then ( () => {
@@ -48,7 +48,7 @@
           let id = counter += 1;
           auth.onAuthStateChanged(user => {
               if(user){
-                  fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                  fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                       id: '_' + id, 
                       HP3_lendo
                   }).then ( () => {
@@ -69,7 +69,7 @@
           let id = counter += 1;
           auth.onAuthStateChanged(user => {
               if(user){
-                  fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                  fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                       id: '_' + id, 
                       HP4_lendo
                   }).then ( () => {
@@ -90,7 +90,7 @@
           let id = counter += 1;
           auth.onAuthStateChanged(user => {
               if(user){
-                  fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                  fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                       id: '_' + id, 
                       HP5_lendo
                   }).then ( () => {
@@ -111,7 +111,7 @@
            let id = counter += 1;
            auth.onAuthStateChanged(user => {
                if(user){
-                   fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                   fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                        id: '_' + id, 
                        HP6_lendo
                    }).then ( () => {
@@ -132,7 +132,7 @@
            let id = counter += 1;
            auth.onAuthStateChanged(user => {
                if(user){
-                   fs.collection('Livros lendo' + ' ' + user.uid).doc('_' + id).set({
+                   fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                        id: '_' + id, 
                        HP7_lendo
                    }).then ( () => {
@@ -153,7 +153,7 @@
      let id = counter += 1; 
      auth.onAuthStateChanged(user => {
          if(user) {
-             fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+             fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                  id: '_' + id, 
                  tortoArado_lendo
              }).then ( () => {
@@ -174,7 +174,7 @@
      let id = counter += 1; 
      auth.onAuthStateChanged(user => {
          if(user) {
-             fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+             fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                  id: '_' + id, 
                  homemBabilonia_lendo
              }).then ( () => {
@@ -195,7 +195,7 @@
       let id = counter += 1; 
       auth.onAuthStateChanged(user => {
           if(user) {
-              fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+              fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                   id: '_' + id, 
                   garotaLago_lendo
               }).then ( () => {
@@ -216,7 +216,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    mulheresLobo_lendo
                }).then ( () => {
@@ -237,7 +237,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    PJ1_lendo
                }).then ( () => {
@@ -258,7 +258,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    PJ2_lendo
                }).then ( () => {
@@ -279,7 +279,7 @@
        let id = counter += 1; 
        auth.onAuthStateChanged(user => {
            if(user) {
-               fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+               fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                    id: '_' + id, 
                    PJ3_lendo
                }).then ( () => {
@@ -300,7 +300,7 @@
          let id = counter += 1; 
          auth.onAuthStateChanged(user => {
              if(user) {
-                 fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                 fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                      id: '_' + id, 
                      PJ4_lendo
                  }).then ( () => {
@@ -321,7 +321,7 @@
           let id = counter += 1; 
           auth.onAuthStateChanged(user => {
               if(user) {
-                  fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                  fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                       id: '_' + id, 
                       PJ5_lendo
                   }).then ( () => {
@@ -342,7 +342,7 @@
            let id = counter += 1; 
            auth.onAuthStateChanged(user => {
                if(user) {
-                   fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                   fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                        id: '_' + id, 
                        revolucaoBichos_lendo
                    }).then ( () => {
@@ -363,7 +363,7 @@
            let id = counter += 1; 
            auth.onAuthStateChanged(user => {
                if(user) {
-                   fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                   fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                        id: '_' + id, 
                        livro1984_lendo
                    }).then ( () => {
@@ -384,7 +384,7 @@
             let id = counter += 1; 
             auth.onAuthStateChanged(user => {
                 if(user) {
-                    fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                    fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                         id: '_' + id, 
                         handmaids_lendo
                     }).then ( () => {
@@ -405,7 +405,7 @@
             let id = counter += 1; 
             auth.onAuthStateChanged(user => {
                 if(user) {
-                    fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                    fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                         id: '_' + id, 
                         milagreManha_lendo
                     }).then ( () => {
@@ -426,7 +426,7 @@
              let id = counter += 1; 
              auth.onAuthStateChanged(user => {
                  if(user) {
-                     fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                     fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                          id: '_' + id, 
                          poderAcao_lendo
                      }).then ( () => {
@@ -447,7 +447,7 @@
              let id = counter += 1; 
              auth.onAuthStateChanged(user => {
                  if(user) {
-                     fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                     fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                          id: '_' + id, 
                          mindset_lendo
                      }).then ( () => {
@@ -468,7 +468,7 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           poderHabito_lendo
                       }).then ( () => {
@@ -489,7 +489,7 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           sutilArte_lendo
                       }).then ( () => {
@@ -510,7 +510,7 @@
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           manualAntirracista_lendo
                       }).then ( () => {
@@ -524,14 +524,14 @@
               })
               })
 
-              //adicionando A coragem de ser imperfeitoa pelo button no database firestore
+              //adicionando A coragem de ser imperfeito pelo button no database firestore
               const coragemImperfeito_lendo = document.getElementById('coragemImperfeito_lendo');
               coragemImperfeito_lendo.addEventListener('click', function(){
                   const coragemImperfeito_lendo = "A coragem de ser imperfeito";
               let id = counter += 1; 
               auth.onAuthStateChanged(user => {
                   if(user) {
-                      fs.collection('Livros lendo' + user.uid).doc('_' + id).set({
+                      fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
                           id: '_' + id, 
                           coragemImperfeito_lendo
                       }).then ( () => {
@@ -544,3 +544,24 @@
                   }
               })
               })
+
+                //adicionando Mentirosos pelo button no database firestore
+                const mentirosos_lendo = document.getElementById('mentirosos_lendo');
+                mentirosos_lendo.addEventListener('click', function(){
+                    const mentirosos_lendo = "Mentirosos";
+                let id = counter += 1; 
+                auth.onAuthStateChanged(user => {
+                    if(user) {
+                        fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
+                            id: '_' + id, 
+                            mentirosos_lendo
+                        }).then ( () => {
+                            alert('Mentirosos adicionado à lista de lendo'); 
+                        }).catch(err => {
+                            console.log(err.message);
+                        })
+                    }else {
+                        //console.log('user is not signed in to add livros')
+                    }
+                })
+                })

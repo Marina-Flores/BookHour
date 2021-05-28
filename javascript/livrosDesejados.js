@@ -544,3 +544,24 @@
                   }
               })
               })
+
+              //adicionando A coragem de ser imperfeitoa pelo button no database firestore
+              const mentirosos_desejo = document.getElementById('mentirosos_desejo');
+              mentirosos_desejo.addEventListener('click', function(){
+                  const mentirosos_desejo = "Mentirosos";
+              let id = counter += 1; 
+              auth.onAuthStateChanged(user => {
+                  if(user) {
+                      fs.collection('Livros desejados' + user.uid).doc('_' + id).set({
+                          id: '_' + id, 
+                          mentirosos_desejo
+                      }).then ( () => {
+                          alert('Mentirosos adicionado à lista de desejos'); 
+                      }).catch(err => {
+                          console.log(err.message);
+                      })
+                  }else {
+                      //console.log('user is not signed in to add livros')
+                  }
+              })
+              })
