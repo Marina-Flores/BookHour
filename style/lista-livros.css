@@ -46,7 +46,7 @@ body {
     font-family: "Dosis", sans-serif;    
   }
 
-  #HP1_desejo, #HP1_lendo, #HP1_lido{
+  .addLista{
     background: #a948e6;
     width: 100px;
     height: 30px;

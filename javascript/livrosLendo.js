@@ -20,7 +20,34 @@ function renderizarDados (docIndividual){
 
     //div lista
     let divLista = document.createElement("div");
-    divLista.textContent = docIndividual.data().lendo || docIndividual.data().lendo_button;
+    divLista.textContent = docIndividual.data().lendo 
+    || docIndividual.data().lendo_button 
+    || docIndividual.data().HP2_lendo 
+    || docIndividual.data().HP3_lendo 
+    || docIndividual.data().HP4_lendo 
+    || docIndividual.data().HP5_lendo 
+    || docIndividual.data().HP6_lendo 
+    || docIndividual.data().HP7_lendo
+    || individualDoc.data().tortoArado_lendo
+    || individualDoc.data().homemBabilonia_lendo
+    || individualDoc.data().garotaLago_lendo
+    || individualDoc.data().mulheresLobo_lendo
+    || individualDoc.data().PJ1_lendo
+    || individualDoc.data().PJ2_lendo
+    || individualDoc.data().PJ3_lendo
+    || individualDoc.data().PJ4_lendo
+    || individualDoc.data().PJ5_lendo
+    || individualDoc.data().revolucaoBichos_lendo
+    || individualDoc.data().livro1984_lendo
+    || individualDoc.data().handmaids_lendo
+    || individualDoc.data().milagreManha_lendo  
+    || individualDoc.data().poderAcao_lendo
+    || individualDoc.data().mindset_lendo
+    || individualDoc.data().poderHabito_lendo
+    || individualDoc.data().mentirosos_lendo
+    || individualDoc.data().sutilArte_lendo
+    || individualDoc.data().manualAntirracista_lendo
+    || individualDoc.data().coragemImperfeito_lendo;
 
     //botao
     let lixo = document.createElement("button");    

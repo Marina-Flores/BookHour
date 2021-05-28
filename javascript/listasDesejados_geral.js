@@ -21,7 +21,34 @@ function renderData(individualDoc) {
 
     // todo div
     let todoDiv = document.createElement("div");
-    todoDiv.textContent = individualDoc.data().todos || individualDoc.data().desejo_button;
+    todoDiv.textContent = individualDoc.data().todos || 
+    individualDoc.data().desejo_button 
+    || individualDoc.data().desejo_hp2 
+    || individualDoc.data().HP3_desejo 
+    || individualDoc.data().HP4_desejo 
+    || individualDoc.data().HP5_desejo 
+    || individualDoc.data().HP6_desejo 
+    || individualDoc.data().HP7_desejo 
+    || individualDoc.data().tortoArado_desejo
+    || individualDoc.data().homemBabilonia_desejo
+    || individualDoc.data().garotaLago_desejo
+    || individualDoc.data().mulheresLobo_desejo
+    || individualDoc.data().PJ1_desejo
+    || individualDoc.data().PJ2_desejo
+    || individualDoc.data().PJ3_desejo
+    || individualDoc.data().PJ4_desejo
+    || individualDoc.data().PJ5_desejo
+    || individualDoc.data().revolucaoBichos_desejo
+    || individualDoc.data().livro1984_desejo
+    || individualDoc.data().handmaids_desejo
+    || individualDoc.data().milagreManha_desejo   
+    || individualDoc.data().poderAcao_desejo
+    || individualDoc.data().mindset_desejo
+    || individualDoc.data().poderHabito_desejo
+    || individualDoc.data().mentirosos_desejo
+    || individualDoc.data().sutilArte_desejo
+    || individualDoc.data().manualAntirracista_desejo
+    || individualDoc.data().coragemImperfeito_desejo;
 
     // button
     let trash = document.createElement("button");
