@@ -43,14 +43,31 @@
 <main>
    <div class="seila">
     <h1 tabindex="0" id="title">Lista de livros</h1>
-
+    <div class="filtros">
+      <div class="pesquisarTitulo">
     <h3 class="text_filter">Procure pelo nome do livre</h3>
     <label for="filtrar-tabela">Filtre:</label>
 		<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do livro">
   </div>
-    <div class="cards">  
+  <div class="pesquisarGenero">
+    <select name="select" id="select">
+      <option value="">Selecione</option>
+      <option value="Literatura_fantastica">Literatura Fantástica</option>
+      <option value="romance">Romance</option>
+      <option value="satira">Sátira</option>
+      <option value="ficcao">Ficção</option>
+      <option value="autoajuda">Autoajuda</option>
+      <option value="manual">Manual</option>
 
-      <div class="cards__single">
+    </select>
+  </div>
+  </div>
+  </div>
+
+
+    <div class="cards" id="pai">
+
+      <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -58,13 +75,12 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">Harry Potter e a  <br> Pedra Filosofal<br> 1977</h1>          
-                 <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#myModal">Mais informações</a>            
-
+                 <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#myModal">Mais informações</a>
           </div>        
         </div>       
         
 
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -73,13 +89,11 @@
             />
             <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> cálice de fogo<br> 2000</h1>
                <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP">Mais informações</a> 
-  
-
-          </div>          
+           </div>          
         </div>
 
 
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -88,12 +102,10 @@
             />
             <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Câmara Secreta<br> 2002 </h1>
                <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP3">Mais informações</a>
-        
-
           </div>          
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica" >
           <div class="cards__front">
             <img
               class="cards__image"
@@ -102,13 +114,10 @@
             />
             <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Ordem da Fênix<br> 2003</h1>
               <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP4">Mais informações</a>
-
-           
-
           </div>          
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -117,11 +126,10 @@
             />
             <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> Prisioneiro de Azkaban<br> 1999</h1>
                <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP5">Mais informações</a>
-
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -130,12 +138,10 @@
             />
             <h1 class="cards__artist" tabindex="0">Harry Potter e as <br> Relíquias da Morte<br> 2007</h1>
                <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP6">Mais informações</a>
-            
-
           </div>          
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -148,7 +154,7 @@
         </div>
   
         
-        <div class="cards__single">
+        <div class="cards__single ficcao romance">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -157,11 +163,10 @@
             />
             <h1 class="cards__artist" tabindex="0">Torto Arado <br> 2019</h1>            
             <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_TortoArado">Mais informações</a>
-
           </div>          
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -170,11 +175,10 @@
             />
             <h1 class="cards__artist" tabindex="0">O homem mais rico da Babilônia <br> 1926</h1>
             <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_homemBabilonia">Mais informações</a>
-
           </div>         
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -182,13 +186,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">Mulheres que correm com os lobos <br> 1989</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_mulheresLobo">Mais informações</a>
-
-           
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_mulheresLobo">Mais informações</a>          
           </div>          
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single suspense ficcao">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -197,11 +199,10 @@
             />
             <h1 class="cards__artist" tabindex="0">A garota do lago <br> 2016</h1>
             <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_garotaLago">Mais informações</a>
-
           </div>          
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -209,12 +210,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Ladrão de Raios  <br> 2005</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ1">Mais informações</a>
-           
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ1">Mais informações</a>           
           </div>          
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -226,7 +226,7 @@
           </div>          
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -234,12 +234,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">Percy Jackson <br> A Maldição do Titã <br> 2007</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ3">Mais informações</a>           
-
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ3">Mais informações</a> 
           </div>         
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -247,12 +246,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">Percy Jackson <br> A Batalha do Labirinto <br> 2008</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ4">Mais informações</a>           
-
-          </div>         
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ4">Mais informações</a>
+           </div>         
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single Literatura_fantastica">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -260,12 +258,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Último Olimpiano <br> 2009</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ5">Mais informações</a>           
-
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ5">Mais informações</a>
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single romance satira">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -273,12 +270,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">A revolução dos bichos <br> 1945</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_revolucaoBichos">Mais informações</a>           
-
-          </div>         
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_revolucaoBichos">Mais informações</a>
+           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single ficcao">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -286,12 +282,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">1984 <br> 1949</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_1984">Mais informações</a>           
-
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_1984">Mais informações</a>
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single ficcao romance">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -299,12 +294,11 @@
               alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
             />
             <h1 class="cards__artist" tabindex="0">O conto da aia <br> 1985</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_handmaids">Mais informações</a>           
-
+            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_handmaids">Mais informações</a>          
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -313,11 +307,10 @@
             />
             <h1 class="cards__artist" tabindex="0">O milagre da manhã <br> 2012</h1>
             <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_milagreManha">Mais informações</a>           
-
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -329,7 +322,7 @@
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -341,7 +334,7 @@
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -353,7 +346,7 @@
           </div>         
         </div>
   
-        <div class="cards__single">
+        <div class="cards__single ficcao suspense">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -365,7 +358,7 @@
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -377,7 +370,7 @@
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single manual">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -389,7 +382,7 @@
           </div>         
         </div>
 
-        <div class="cards__single">
+        <div class="cards__single autoajuda">
           <div class="cards__front">
             <img
               class="cards__image"
@@ -435,8 +428,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+           </div>            
           </div>
         </div>
 
@@ -475,8 +467,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -514,8 +505,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -553,8 +543,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -592,8 +581,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -631,8 +619,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -670,8 +657,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -709,8 +695,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -748,8 +733,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -787,8 +771,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -826,8 +809,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
  
@@ -865,8 +847,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -904,8 +885,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div>
 
@@ -943,8 +923,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 
@@ -982,8 +961,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 
@@ -1021,8 +999,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 
@@ -1061,8 +1038,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 
@@ -1100,8 +1076,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 
@@ -1139,8 +1114,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 
@@ -1178,8 +1152,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-            </div>
-            
+            </div>            
           </div>
         </div> 
 

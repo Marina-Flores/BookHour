@@ -24,3 +24,53 @@ campoFiltro.addEventListener("input", function(){
     }
 
 });
+
+const ficcao = document.getElementsByClassName("ficcao"); 
+const romance = document.getElementsByClassName("romance"); 
+const autoajuda = document.getElementsByClassName("autoajuda"); 
+const suspense = document.getElementsByClassName("suspense"); 
+const satira = document.getElementsByClassName("satira"); 
+const manual = document.getElementsByClassName("manual"); 
+
+
+$(document).ready(function(){
+    $('#select').on('change', function(){
+        var selectValor = $(this).val();
+        if(selectValor != 'Literatura_fantastica'){
+            $('#pai').children('.Literatura_fantastica').hide();
+        } else {
+            $('#pai').children('.Literatura_fantastica').show();
+        }
+        if(selectValor != 'ficcao'){
+            $('#pai').children('.ficcao').hide();
+        } else {
+            $('#pai').children('.ficcao').show();
+        }
+        if(selectValor != 'autoajuda'){
+            $('#pai').children('.autoajuda').hide();
+        } else {
+            $('#pai').children('.autoajuda').show();
+        }
+        if(selectValor != 'romance'){
+            $('#pai').children('.romance').hide();
+        } else {
+            $('#pai').children('.romance').show();
+        }
+        if(selectValor != 'manual'){
+            $('#pai').children('.manual').hide();
+        } else {
+            $('#pai').children('.manual').show();
+        }
+        if(selectValor != 'suspense'){
+            $('#pai').children('.suspense').hide();
+        } else {
+            $('#pai').children('.suspense').show();
+        }
+        if(selectValor != 'satira'){
+            $('#pai').children('.satira').hide();
+        } else {
+            $('#pai').children('.satira').show();
+        }
+    });
+
+})
