@@ -18,13 +18,22 @@ function addComentario_HP2 (commentIndividual_HP2) {
     icone_HP2.className = "fas fa-trash"; 
 
     //acrescentando
-
     apagar_HP2.appendChild(icone_HP2); 
-
     divMae_hp2.appendChild(divComent_hp2); 
-    divMae_hp2.appendChild(apagar_HP2); 
 
     hp2_espaco_comentarios.appendChild(divMae_hp2); 
+
+    fs.collection("Comentarios_HP2").where("user", "==", firebase.auth().currentUser.uid)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {            
+            console.log(doc.id, " => ", doc.data());
+            divMae_hp2.appendChild(apagar_HP2); 
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
 
 
     //evento click no lixo
@@ -32,7 +41,7 @@ function addComentario_HP2 (commentIndividual_HP2) {
         let id = e.target.parentElement.parentElement.getAttribute('id-comentHP2'); 
         auth.onAuthStateChanged(user => {           
             if (user && commentIndividual_HP2.data().user == firebase.auth().currentUser.uid){ 
-                fs.collection('Comentarios HP2').doc(id).delete();
+                fs.collection('Comentarios_HP2').doc(id).delete();
                 console.log(commentIndividual_HP2.data().user);
             }else{
                 console.log("Você não pode apagar este comentário!");
@@ -52,7 +61,7 @@ campo_comentario_hp2.addEventListener('submit', e => {
     campo_comentario_hp2.reset(); 
     auth.onAuthStateChanged(user => {
         if(user) {
-            fs.collection('Comentarios HP2').doc('_' + id).set({
+            fs.collection('Comentarios_HP2').doc('_' + id).set({
                 id: '_' + id,                
                 user: user.uid,
                 comentario_HP2           
@@ -70,7 +79,7 @@ campo_comentario_hp2.addEventListener('submit', e => {
  //realtime listeners 
  auth.onAuthStateChanged(user => {
      if (user){
-        fs.collection('Comentarios HP2').onSnapshot((snapshot) => {
+        fs.collection('Comentarios_HP2').onSnapshot((snapshot) => {
              let edicoes_HP2 = snapshot.docChanges();
              edicoes_HP2.forEach(edicao_HP2 => {
                  if (edicao_HP2.type == "added") {

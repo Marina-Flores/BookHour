@@ -7,15 +7,12 @@ function addComentario (commentIndividual) {
     divMae.className = "espaco caixa-comentarios";
     divMae.setAttribute('id-coment', commentIndividual.id); 
 
-    //div comentarios
+    //criando div para comentarios
     let divComent = document.createElement("div"); 
     divComent.textContent = commentIndividual.data().comentario;
-
-
     
-    //botao   
+    //criando botao de apagar comentario   
         let apagar = document.createElement("button"); 
-
         let icone = document.createElement("i"); 
         icone.className = "fas fa-trash"; 
       
@@ -23,9 +20,21 @@ function addComentario (commentIndividual) {
     apagar.appendChild(icone); 
 
     divMae.appendChild(divComent); 
-    divMae.appendChild(apagar); 
 
     lista_espaco_comentarios.appendChild(divMae); 
+
+    //mostrando o botao de apagar somente para o user que comentar
+    fs.collection("Comentarios").where("user", "==", firebase.auth().currentUser.uid)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {            
+            console.log(doc.id, " => ", doc.data());
+            divMae.appendChild(apagar); 
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
 
 
     //evento click no lixo
@@ -41,6 +50,7 @@ function addComentario (commentIndividual) {
         })
     })     
 }
+
 
 //adicionando comentarios no database firestore
 const campo_comentario = document.getElementById('campo_comentario'); 
