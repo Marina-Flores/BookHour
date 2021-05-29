@@ -71,6 +71,16 @@ $(document).ready(function(){
         } else {
             $('#pai').children('.satira').show();
         }
+        if(selectValor == 'todos'){
+            $('#pai').children('.satira').show();
+            $('#pai').children('.suspense').show();
+            $('#pai').children('.manual').show();
+            $('#pai').children('.romance').show();
+            $('#pai').children('.autoajuda').show();
+            $('#pai').children('.ficcao').show();
+            $('#pai').children('.Literatura_fantastica').show();
+
+        }
     });
 
 })
