@@ -48,7 +48,15 @@ function renderData(individualDoc) {
     || individualDoc.data().mentirosos_desejo
     || individualDoc.data().sutilArte_desejo
     || individualDoc.data().manualAntirracista_desejo
-    || individualDoc.data().coragemImperfeito_desejo;
+    || individualDoc.data().coragemImperfeito_desejo
+    || individualDoc.data().ventosUivantes_desejo
+    || individualDoc.data().orgulhoPreconceito_desejo
+    || individualDoc.data().iluminado_desejo
+    || individualDoc.data().it_desejo;
+
+
+
+
 
     // button
     let trash = document.createElement("button");

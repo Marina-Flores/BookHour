@@ -30,7 +30,14 @@ function renderizar_dados (doc_Individual) {
     || doc_Individual.data().mentirosos_lido
     || doc_Individual.data().sutilArte_lido
     || doc_Individual.data().manualAntirracista_lido
-    || doc_Individual.data().coragemImperfeito_lido; 
+    || doc_Individual.data().coragemImperfeito_lido
+    || doc_Individual.data().ventosUivantes_lido
+    || doc_Individual.data().orgulhoPreconceito_lido
+    || doc_Individual.data().iluminado_lido
+    || doc_Individual.data().it_lido; 
+
+
+ 
     //botao
     let lixeira = document.createElement("button"); 
 

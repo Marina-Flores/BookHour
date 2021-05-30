@@ -2,1488 +2,1819 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link href="../views/listasUser.html">
-    <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="../style/listasUser.css">
-    <link rel="stylesheet" href="../style/lista-livros.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link href="../views/listasUser.html">
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/listasUser.css">
+  <link rel="stylesheet" href="../style/lista-livros.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
-     <!-- fontAweosum -->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
- <!-- googleFonts -->
-    <link rel="stylesheet"
-     href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
+  <!-- fontAweosum -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- googleFonts -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
 
 </head>
+
 <body>
-    <header>
-  <div class="box">
-            <div class="logo">
-                <img class="logoBookHour" src="../img/logo1.png" alt="Logo da Book Hour" style="height: 230px; display: block; margin: 0 auto;">
-              </div>
-           
-              <nav>
-                <ul>
-                    <li><a href="lista-livros.html">Home</a></li>
-                    <li><a href="./listasUser.html">Minhas listas</a></li>
-                    <li><a href="./profile.html">Configurações</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="box">
+      <div class="logo">
+        <img class="logoBookHour" src="../img/logo1.png" alt="Logo da Book Hour"
+          style="height: 230px; display: block; margin: 0 auto;">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="lista-livros.html">Home</a></li>
+          <li><a href="./listasUser.html">Minhas listas</a></li>
+          <li><a href="./profile.html">Configurações</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="seila">
+      <h1 tabindex="0" id="title">Lista de livros</h1>
+      <div class="filtros">
+        <div class="pesquisarTitulo">
+          <h3 class="text_filter">Procure pelo nome do livre</h3>
+          <label for="filtrar-tabela">Filtre pelo título:</label>
+          <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do livro">
         </div>
-        </header>
+        <div class="pesquisarGenero">
+          <label for="filtrar-tabela">Filtre pelo gênero:</label>
+          <select name="select" id="select">
+            <option value="todos">Todos</option>
+            <option value="Literatura_fantastica">Literatura Fantástica</option>
+            <option value="romance">Romance</option>
+            <option value="satira">Sátira</option>
+            <option value="ficcao">Ficção</option>
+            <option value="autoajuda">Autoajuda</option>
+            <option value="horror">Horror</option>
+            <option value="manual">Manual</option>
 
-<main>
-   <div class="seila">
-    <h1 tabindex="0" id="title">Lista de livros</h1>
-    <div class="filtros">
-      <div class="pesquisarTitulo">
-    <h3 class="text_filter">Procure pelo nome do livre</h3>
-    <label for="filtrar-tabela">Filtre pelo título:</label>
-		<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do livro">
-  </div>
-  <div class="pesquisarGenero">
-    <label for="filtrar-tabela">Filtre pelo gênero:</label>
-    <select name="select" id="select">      
-      <option value="todos">Todos</option>
-      <option value="Literatura_fantastica">Literatura Fantástica</option>
-      <option value="romance">Romance</option>
-      <option value="satira">Sátira</option>
-      <option value="ficcao">Ficção</option>
-      <option value="autoajuda">Autoajuda</option>
-      <option value="manual">Manual</option>
-
-    </select>
-  </div>
-  </div>
-  </div>
+          </select>
+        </div>
+      </div>
+    </div>
 
 
     <div class="cards" id="pai">
 
       <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e a  <br> Pedra Filosofal<br> 1977</h1>          
-                 <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#myModal">Mais informações</a>
-          </div>        
-        </div>       
-        
-
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP2.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> cálice de fogo<br> 2000</h1>
-               <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP">Mais informações</a> 
-           </div>          
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Pedra Filosofal<br> 1977</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#myModal">Mais
+            informações</a>
         </div>
+      </div>
 
 
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP3.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Câmara Secreta<br> 2002 </h1>
-               <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP3">Mais informações</a>
-          </div>          
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP2.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> cálice de fogo<br> 2000</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single Literatura_fantastica" >
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP4.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Ordem da Fênix<br> 2003</h1>
-              <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP4">Mais informações</a>
-          </div>          
-        </div>
 
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP5.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> Prisioneiro de Azkaban<br> 1999</h1>
-               <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP5">Mais informações</a>
-          </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP3.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Câmara Secreta<br> 2002 </h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP3">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP6.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e as <br> Relíquias da Morte<br> 2007</h1>
-               <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP6">Mais informações</a>
-          </div>          
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP4.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e a <br> Ordem da Fênix<br> 2003</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP4">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/HP7.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> Enigma do Príncipe <br> 2005</h1>
-               <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP7">Mais informações</a>
-          </div>          
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP5.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> Prisioneiro de Azkaban<br> 1999</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP5">Mais
+            informações</a>
         </div>
-  
-        
-        <div class="cards__single ficcao romance">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/tortoArado.jpg"
-              alt="Capa do livro: 'Torto Arado'"
-            />
-            <h1 class="cards__artist" tabindex="0">Torto Arado <br> 2019</h1>            
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_TortoArado">Mais informações</a>
-          </div>          
-        </div>
-  
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/homemBabilonia.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">O homem mais rico da Babilônia <br> 1926</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_homemBabilonia">Mais informações</a>
-          </div>         
-        </div>
-  
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/mulheresLobos.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Mulheres que correm com os lobos <br> 1989</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_mulheresLobo">Mais informações</a>          
-          </div>          
-        </div>
-  
-        <div class="cards__single suspense ficcao">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/garotaLago.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">A garota do lago <br> 2016</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_garotaLago">Mais informações</a>
-          </div>          
-        </div>
-  
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/PJ1.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Ladrão de Raios  <br> 2005</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ1">Mais informações</a>           
-          </div>          
-        </div>
-  
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/PJ2.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Mar de Monstros <br> 2006</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ2">Mais informações</a>           
-          </div>          
-        </div>
-  
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/PJ3.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Percy Jackson <br> A Maldição do Titã <br> 2007</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ3">Mais informações</a> 
-          </div>         
-        </div>
-  
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/PJ4.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Percy Jackson <br> A Batalha do Labirinto <br> 2008</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ4">Mais informações</a>
-           </div>         
-        </div>
-  
-        <div class="cards__single Literatura_fantastica">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/PJ5.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Último Olimpiano <br> 2009</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ5">Mais informações</a>
-          </div>         
-        </div>
+      </div>
 
-        <div class="cards__single romance satira">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/revolucaoBichos.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">A revolução dos bichos <br> 1945</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_revolucaoBichos">Mais informações</a>
-           </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP6.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e as <br> Relíquias da Morte<br> 2007</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP6">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single ficcao">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/1984.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">1984 <br> 1949</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_1984">Mais informações</a>
-          </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/HP7.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Harry Potter e o <br> Enigma do Príncipe <br> 2005</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modalHP7">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single ficcao romance">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/handmaids.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">O conto da aia <br> 1985</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_handmaids">Mais informações</a>          
-          </div>         
+
+      <div class="cards__single ficcao romance">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/tortoArado.jpg" alt="Capa do livro: 'Torto Arado'" />
+          <h1 class="cards__artist" tabindex="0">Torto Arado <br> 2019</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_TortoArado">Mais informações</a>
         </div>
+      </div>
 
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/milagreManha.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">O milagre da manhã <br> 2012</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_milagreManha">Mais informações</a>           
-          </div>         
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/homemBabilonia.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O homem mais rico da Babilônia <br> 1926</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_homemBabilonia">Mais informações</a>
         </div>
+      </div>
 
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/poderAcao.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">O poder da ação<br> 2015</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_poderAcao">Mais informações</a>            
-          </div>         
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/mulheresLobos.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Mulheres que correm com os lobos <br> 1989</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_mulheresLobo">Mais informações</a>
         </div>
+      </div>
 
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/mindset.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Mindset: A nova psicologia do sucesso<br> 2006</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_mindset">Mais informações</a>            
-          </div>         
+      <div class="cards__single suspense ficcao">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/garotaLago.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">A garota do lago <br> 2016</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_garotaLago">Mais informações</a>
         </div>
+      </div>
 
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/poderhabito.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">O poder do hábito<br> 2012</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_poderHabito">Mais informações</a>            
-          </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/PJ1.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Ladrão de Raios <br> 2005</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ1">Mais
+            informações</a>
         </div>
-  
-        <div class="cards__single ficcao suspense">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/mentirosos.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Mentirosos<br> 2014</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_mentirosos">Mais informações</a>            
-          </div>         
+      </div>
+
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/PJ2.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Mar de Monstros <br> 2006</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ2">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/sutilarte.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">A sutil arte de ligar o foda‑se<br> 2016</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_sutilArte">Mais informações</a>            
-          </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/PJ3.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Percy Jackson <br> A Maldição do Titã <br> 2007</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ3">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single manual">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/manualAntirracista.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">Pequeno manual antirracista<br> 2019</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_manualAntirracista">Mais informações</a>            
-          </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/PJ4.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Percy Jackson <br> A Batalha do Labirinto <br> 2008</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ4">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="cards__single autoajuda">
-          <div class="cards__front">
-            <img
-              class="cards__image"
-              src="../img/serImperfeito.jpg"
-              alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'"
-            />
-            <h1 class="cards__artist" tabindex="0">A coragem de ser imperfeito<br> 2012</h1>
-            <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_coragemImperfeito">Mais informações</a>            
-          </div>         
+      <div class="cards__single Literatura_fantastica">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/PJ5.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Percy Jackson <br> O Último Olimpiano <br> 2009</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_PJ5">Mais
+            informações</a>
         </div>
+      </div>
 
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e a Pedra Filosofal-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">Harry Potter e a Pedra Filosofal é o primeiro dos sete livros da série de fantasia Harry Potter, escrita por J. K. Rowling. O livro conta a história de Harry Potter, um órfão criado pelos tios que descobre, em seu décimo primeiro aniversário, que é um bruxo.</p>
-              </div>
-              <button class="addLista" id="HP1_desejo">Quero ler!</button>
-              <button class="addLista" id="HP1_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP1_lido">Já li!</button>
+      <div class="cards__single romance satira">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/revolucaoBichos.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">A revolução dos bichos <br> 1945</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_revolucaoBichos">Mais informações</a>
+        </div>
+      </div>
 
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario">
-                  <input type="search" class="comentarioAdd" id="comentario" placeholder="Faça um comentário" required> 
+      <div class="cards__single ficcao">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/1984.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">1984 <br> 1949</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_1984">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single ficcao romance">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/handmaids.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O conto da aia <br> 1985</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_handmaids">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/milagreManha.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O milagre da manhã <br> 2012</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_milagreManha">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/poderAcao.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O poder da ação<br> 2015</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_poderAcao">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/mindset.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Mindset: A nova psicologia do sucesso<br> 2006</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_mindset">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/poderhabito.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O poder do hábito<br> 2012</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_poderHabito">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single ficcao suspense">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/mentirosos.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Mentirosos<br> 2014</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_mentirosos">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/sutilarte.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">A sutil arte de ligar o foda‑se<br> 2016</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_sutilArte">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single manual">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/manualAntirracista.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Pequeno manual antirracista<br> 2019</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_manualAntirracista">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single autoajuda">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/serImperfeito.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">A coragem de ser imperfeito<br> 2012</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_coragemImperfeito">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single romance">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/ventosUivantes.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O morro dos ventos uivantes<br> 1847</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_ventosUivantes">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single romance">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/orgulhoPreconceito.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">Orgulho e Preconceito<br> 1813</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal"
+            data-target="#modal_orgulhoPreconceito">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single horror">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/iluminado.jpg"
+            alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">O iluminado<br> 1977</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_iluminado">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="cards__single horror">
+        <div class="cards__front">
+          <img class="cards__image" src="../img/it.jpg" alt="Capa do livro: 'Harry Potter e a Pedra Filosofal'" />
+          <h1 class="cards__artist" tabindex="0">It: A coisa<br> 1986</h1>
+          <a type="button" class="btn btn-info btn-lg btn_modal" data-toggle="modal" data-target="#modal_it">Mais
+            informações</a>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Harry Potter e a Pedra Filosofal-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">Harry Potter e a Pedra Filosofal é o primeiro dos sete livros da série de fantasia
+                Harry Potter, escrita por J. K. Rowling. O livro conta a história de Harry Potter, um órfão criado pelos
+                tios que descobre, em seu décimo primeiro aniversário, que é um bruxo.</p>
+            </div>
+            <button class="addLista" id="HP1_desejo">Quero ler!</button>
+            <button class="addLista" id="HP1_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP1_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario">
+                  <input type="search" class="comentarioAdd" id="comentario" placeholder="Faça um comentário" required>
                   <input type="submit" class="btnAdd" value="Comentar">
                 </form>
-                  </div>
-            
-                  <div class="comentarios" id="lista-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
               </div>
-           </div>            
-          </div>
-        </div>
 
-        
-        <div class="modal fade" id="modalHP" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e o Cálice de fogo-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">Verão, Harry Potter, agora com 14 anos, sente sua cicatriz arder durante um sonho bastante real com Lord Voldemort, o qual não consegue esquecer, três dias depois, já em companhia da família Weasley, com quem foi passar o restante das férias, na final da Copa Mundial de Quadribol, os Comensais da Morte, seguidores de Você-Sabe-Quem, reaparecem e alguém conjura a Marca Negra, o sinal de Lord Voldemort, projetando-a no céu pela primeira vez em 13 anos, causando pânico na comunidade mágica.</p>
-              </div>
-              <button class="addLista" id="HP2_desejo">Quero ler!</button>
-              <button class="addLista" id="HP2_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP2_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_hp2">
-                  <input type="search" class="comentarioAdd" id="comentario_hp2" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="hp2-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modalHP3" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e a Câmara Secreta-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">Após as sofríveis férias na casa dos tios, Harry Potter se prepara para voltar a Hogwarts e começar seu segundo ano na escola de bruxos. Na véspera do início das aulas, a estranha criatura Dobby aparece em seu quarto e o avisa de que voltar é um erro e que algo muito ruim pode acontecer se Harry insistir em continuar os estudos de bruxaria. O garoto, no entanto, está disposto a correr o risco e se livrar do lar problemático.</p>
-              </div>
-              <button class="addLista" id="HP3_desejo">Quero ler!</button>
-              <button class="addLista" id="HP3_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP3_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_hp3">
-                  <input type="search" class="comentarioAdd" id="comentario_hp3" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="hp3-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modalHP4" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e a Ordem da Fênix-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">Neste quinto livro da saga, o protagonista, numa crise típica da adolescência, tem ataques de mau humor com a perseguição da imprensa, que o segue por todos os lugares e chega a inventar declarações que nunca deu. Harry vai enfrentar as investidas de Voldemort sem a proteção de Dumbledore, já que o diretor de Hogwarts é afastado da escola. E vai ser sem a ajuda de seu protetor que o jovem herói enfrentará descobertas sobre a personalidade controversa de seu pai, Tiago Potter, e a morte de alguém muito próximo.</p>
-              </div>
-              <button class="addLista" id="HP4_desejo">Quero ler!</button>
-              <button class="addLista" id="HP4_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP4_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_hp4">
-                  <input type="search" class="comentarioAdd" id="comentario_hp4" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="hp4-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modalHP5" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e o Prisioneiro de Azkaban-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">As aulas estão de volta à Hogwarts e Harry Potter não vê a hora de embarcar no expresso a vapor que o levará de volta à escola de bruxaria. Mais uma vez suas férias na rua dos Alfeneiros foi triste e solitária. Com muita ação, humor e magia, 'Harry Potter e o prisioneiro de Azkaban' traz de volta o gigante atrapalhado Rúbeo Hagrid, o sábio diretor Alvo Dumbledore, a exigente professora de transformação Minerva MacGonagall e o novo mestre Lupin, que guarda grandes surpresas para Harry.</p>
-              </div>
-              <button class="addLista" id="HP5_desejo">Quero ler!</button>
-              <button class="addLista" id="HP5_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP5_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_hp5">
-                  <input type="search" class="comentarioAdd" id="comentario_hp5" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="hp5-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modalHP6" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e as Relíquias da Morte-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">'Harry Potter e as relíquias da morte', de J.K. Rowling, é o sétimo e último livro da série. Voldemorte está cada vez mais forte e Harry Potter precisa encontrar e aniquilar as Horcruxes para enfraquecer o lorde e poder enfrentálo. Nessa busca desenfreada, contando apenas com os amigos Rony e Hermione, Harry descobre as Relíquias da Morte, que serão úteis na batalha do bem contra o mal.</p>
-              </div>
-              <button class="addLista" id="HP6_desejo">Quero ler!</button>
-              <button class="addLista" id="HP6_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP6_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_hp6">
-                  <input type="search" class="comentarioAdd" id="comentario_hp6" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="hp6-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modalHP7" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter e o Enígma do Príncipe-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): J. K. Rowling</p>
-                <p class="descricao">Harry, que acabou de completar 16 anos, parte rumo ao sexto ano na Escola de Magia e Bruxaria de Hogwarts, animado e ao mesmo tempo apreensivo com a perspectiva de ter aulas particulares com o professor Dumbledore, o diretor da escola e o bruxo mais respeitado em toda comunidade mágica. Harry, longe de ser aquele menino magricela que vivia no quarto debaixo da escada na casa dos tios trouxas, é um dos principais nomes entre aqueles que lutam contra Voldemort, e se vê cada vez mais isolado à medida que os rumores de que ele é O Eleito o único capaz de derrotar o Lorde das Trevas, se espalham pelo mundo dos bruxos.</p>
-              </div>
-              <button class="addLista" id="HP7_desejo">Quero ler!</button>
-              <button class="addLista" id="HP7_lendo">Estou lendo!</button>
-              <button class="addLista" id="HP7_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_hp7">
-                  <input type="search" class="comentarioAdd" id="comentario_hp7" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="hp7-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal_TortoArado" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Torto Arado-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Itamar Vieira Juniorg</p>
-                <p class="descricao">Um texto épico e lírico, realista e mágico que revela, para além de sua trama, um poderoso elemento de insubordinação social. Nas profundezas do sertão baiano, as irmãs Bibiana e Belonísia encontram uma velha e misteriosa faca na mala guardada sob a cama da avó. Ocorre então um acidente. E para sempre suas vidas estarão ligadas — a ponto de uma precisar ser a voz da outra. Numa trama conduzida com maestria e com uma prosa melodiosa, o romance conta uma história de vida e morte, de combate e redenção.</p>
-              </div>
-              <button class="addLista" id="tortoArado_desejo">Quero ler!</button>
-              <button class="addLista" id="tortoArado_lendo">Estou lendo!</button>
-              <button class="addLista" id="tortoArado_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_tortoArado">
-                  <input type="search" class="comentarioAdd" id="comentario_tortoArado" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="tortoArado-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal_homemBabilonia" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal O homem mais rico da babilônia-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): George S. Clason</p>
-                <p class="descricao">O homem mais rico da Babilônia é um clássico sobre como multiplicar riqueza e solucionar problemas financeiros. Baseando-se nos segredos de sucesso dos antigos babilônicos ― os habitantes da cidade mais rica e próspera de seu tempo ―, George S. Clason mostra soluções ao mesmo tempo sábias e muito atuais para evitar a falta de dinheiro, como não desperdiçar recursos durante tempos de opulência, buscar conhecimento e informação em vez de apenas lucro, assegurar uma renda para o futuro, manter a pontualidade no pagamento de dívidas e, sobretudo, cultivar as próprias aptidões, tornando-se cada vez mais habilidoso e consciente.</p>
-              </div>
-              <button class="addLista" id="homemBabilonia_desejo">Quero ler!</button>
-              <button class="addLista" id="homemBabilonia_lendo">Estou lendo!</button>
-              <button class="addLista" id="homemBabilonia_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_homemBabilonia">
-                  <input type="search" class="comentarioAdd" id="comentario_homemBabilonia" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="homemBabilonia-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal_mulheresLobo" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Mulheres que correm com os lobos-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Clarissa Pinkola Estés</p>
-                <p class="descricao">Abordando 19 mitos, lendas e contos de fada, como a história do patinho feio e do Barba-Azul, Estés mostra como a natureza instintiva da mulher foi sendo domesticada ao longo dos tempos, num processo que punia todas aquelas que se rebelavam. Segundo a analista, a exemplo das florestas virgens e dos animais silvestres, os instintos foram devastados e os ciclos naturais femininos transformados à força em ritmos artificiais para agradar aos outros. Mas sua energia vital, segundo ela, pode ser restaurada por escavações psíquico-arqueológicas' nas ruínas do mundo subterrâneo.</p>
-              </div>
-              <button class="addLista" id="mulheresLobo_desejo">Quero ler!</button>
-              <button class="addLista" id="mulheresLobo_lendo">Estou lendo!</button>
-              <button class="addLista" id="mulheresLobo_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_mulheresLobo">
-                  <input type="search" class="comentarioAdd" id="comentario_mulheresLobo" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="mulheresLobo-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal_garotaLago" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal A garota do lago-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Charlie Donlea</p>
-                <p class="descricao">Summit Lake, uma pequena cidade entre montanhas, é esse tipo de lugar, bucólico e com encantadoras casas dispostas à beira de um longo trecho de água intocada.Duas semanas atrás, a estudante de direito Becca Eckersley foi brutalmente assassinada em uma dessas casas. Filha de um poderoso advogado, Becca estava no auge de sua vida. Atraída instintivamente pela notícia, a repórter Kelsey Castle vai até a cidade para investigar o caso</p>
-              </div>
-              <button class="addLista" id="garotaLago_desejo">Quero ler!</button>
-              <button class="addLista" id="garotaLago_lendo">Estou lendo!</button>
-              <button class="addLista" id="garotaLago_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_garotaLago">
-                  <input type="search" class="comentarioAdd" id="comentario_garotaLago" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="garotaLago-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
- 
-        <div class="modal fade" id="modal_PJ1" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Percy Jackson - O ladrão de raios-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Rick Riordan</p>
-                <p class="descricao">Os deuses do Olimpo continuam vivos, em pleno século XXI! Eles ainda se apaixonam por mortais e têm filhos que podem se tornar grandes heróis, mas que acabam, na maioria das vezes, encontrando destinos terríveis nas garras de monstros sem coração. Apenas alguns descobrem sua identidade e conseguem chegar ao Acampamento Meio-Sangue, um acampamento de verão em Long Island dedicado ao treinamento de jovens semideuses. Essa é a revelação que leva Percy Jackson a uma incrível busca para ajudar seu verdadeiro pai - o deus dos mares! -, a evitar uma guerra no Olimpo.</p>
-              </div>
-              <button class="addLista" id="PJ1_desejo">Quero ler!</button>
-              <button class="addLista" id="PJ1_lendo">Estou lendo!</button>
-              <button class="addLista" id="PJ1_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_pj1">
-                  <input type="search" class="comentarioAdd" id="comentario_pj1" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="pj1-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal_PJ2" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Percy Jackson - O mar de monstros-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Rick Riordan</p>
-                <p class="descricao">Nessa nova aventura, Percy e seus amigos estão em busca do Velocino de Ouro, único artefato mágico capaz de proteger da destruição seu lugar predileto e, até então, o mais seguro do mundo: o Acampamento Meio-Sangue. Com o envenenamento da árvore de Thalia por um inimigo misterioso, as fronteiras mágicas que protegem o Acampamento estão ameaçadas, e é preciso buscar o antídoto. Assim, nossos heróis partem em uma arriscada e incrível viagem pelo Mar de Monstros, localizado nas coordenadas 30-31-75-12: uma referência ao Triângulo das Bermudas. Lá, enfrentam seres fantásticos e muitos perigos e situações inusitadas, que põem à prova seu heroísmo e sua herança – quando Percy irá questionar se ser filho de Poseidon é uma honra ou uma terrível maldição.</p>
-              </div>
-              <button class="addLista" id="PJ2_desejo">Quero ler!</button>
-              <button class="addLista" id="PJ2_lendo">Estou lendo!</button>
-              <button class="addLista" id="PJ2_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_pj2">
-                  <input type="search" class="comentarioAdd" id="comentario_pj2" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="pj2-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal_PJ3" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Harry Potter - A maldição do Titã-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Rick Riordan</p>
-                <p class="descricao">Um chamado do amigo Grover deixa Percy a postos para mais uma missão: dois novos meios-sangues foram encontrados, e sua ascendência ainda é desconhecida. Como sempre, Percy sabe que precisará contar com o poder de seus aliados heróis, com sua leal espada Contracorrente... e com uma caroninha da mãe. O que eles ainda não sabem é que os jovens descobertos não são os únicos em perigo: Cronos, o Senhor dos Titãs, arquitetou um de seus planos mais traiçoeiros, e nossos heróis serão presas fáceis. Um monstro ancestral foi despertado – um ser com poder suficiente para destruir o Olimpo –, e Ártemis, a única deusa capaz de encontrá-lo, desapareceu. </p>
-              </div>
-              <button class="addLista" id="PJ3_desejo">Quero ler!</button>
-              <button class="addLista" id="PJ3_lendo">Estou lendo!</button>
-              <button class="addLista" id="PJ3_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_pj3">
-                  <input type="search" class="comentarioAdd" id="comentario_pj3" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="pj3-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        <div class="modal fade" id="modal_PJ4" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Percy Jackson - A batalha do labirinto-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Rick Riordan</p>
-                <p class="descricao">O Monte Olimpo está em perigo. Cronos, o perverso titã que foi destronado e feito em pedaços pelos doze deuses olimpianos, prepara um retorno triunfal. O primeiro passo de suas tropas será atacar e destruir o campo de treinamento dos heróis, filhos de deuses com mortais, que desde a Grécia Antiga combatem na linha de frente em defesa dos olimpianos. Para assegurar que o refúgio de semideuses, o Acampamento Meio-Sangue, não seja invadido, Percy Jackson, Tyson, Annabeth e Grover são destacados para uma importante missão: deter as forças de Cronos antes que se aproximem do acampamento, no emaranhado de corredores do temido Labirinto de Dédalo – um interminável universo subterrâneo que, a cada curva, revela as mais aterrorizantes surpresas. </p>
-              </div>
-              <button class="addLista" id="PJ4_desejo">Quero ler!</button>
-              <button class="addLista" id="PJ4_lendo">Estou lendo!</button>
-              <button class="addLista" id="PJ4_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_pj4">
-                  <input type="search" class="comentarioAdd" id="comentario_pj4" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="pj4-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        <div class="modal fade" id="modal_PJ5" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal Percy Jackson - O último olimpiano-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Rick Riordan</p>
-                <p class="descricao">Os meios-sangues e semideuses passaram todo o ano preparando-se para a batalha contra os Titãs, e sabem que as chances de vitória são pequenas. O exército de Cronos está mais poderoso que nunca, e cada novo deus ou meio-sangue que se une à causa confere mais força ao vingativo titã. Enquanto os Olimpianos se ocupam de conter a fúria do monstro Tifão, Cronos avança em direção à cidade de Nova York, onde o Monte Olimpo está precariamente vigiado. Agora, apenas Percy Jackson e seu exército de heróis podem deter o Senhor do Tempo. </p>
-              </div>
-              <button class="addLista" id="PJ5_desejo">Quero ler!</button>
-              <button class="addLista" id="PJ5_lendo">Estou lendo!</button>
-              <button class="addLista" id="PJ5_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_pj5">
-                  <input type="search" class="comentarioAdd" id="comentario_pj5" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="pj5-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        
-        <div class="modal fade" id="modal_revolucaoBichos" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal A revolução dos bichos-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): George Orwell</p>
-                <p class="descricao">Escrita em plena Segunda Guerra Mundial e publicada em 1945 depois de ter sido rejeitada por várias editoras, essa pequena narrativa causou desconforto ao satirizar ferozmente a ditadura stalinista numa época em que os soviéticos ainda eram aliados do Ocidente na luta contra o eixo nazifascista. De fato, são claras as referências: o despótico Napoleão seria Stálin, o banido Bola-de-Neve seria Trotsky, e os eventos políticos - expurgos, instituição de um estado policial, deturpação tendenciosa da História - mimetizam os que estavam em curso na União Soviética. Com o acirramento da Guerra Fria, as mesmas razões que causaram constrangimento na época de sua publicação levaram A revolução dos bichos a ser amplamente usada pelo Ocidente nas décadas seguintes como arma ideológica contra o comunismo.</p>
-              </div>
-              <button class="addLista" id="revolucaoBichos_desejo">Quero ler!</button>
-              <button  class="addLista" id="revolucaoBichos_lendo">Estou lendo!</button>
-              <button class="addLista" id="revolucaoBichos_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_revolucaoBichos">
-                  <input type="search" class="comentarioAdd" id="comentario_revolucaoBichos" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="revolucaoBichos-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        <div class="modal fade" id="modal_1984" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal 1984-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): George Orwell</p>
-                <p class="descricao">Winston, herói de 1984, último romance de George Orwell, vive aprisionado na engrenagem totalitária de uma sociedade completamente dominada pelo Estado, onde tudo é feito coletivamente, mas cada qual vive sozinho. Ninguém escapa à vigilância do Grande Irmão, a mais famosa personificação literária de um poder cínico e cruel ao infinito, além de vazio de sentido histórico.</p>
-              </div>
-              <button class="addLista" id="livro1984_desejo">Quero ler!</button>
-              <button class="addLista" id="livro1984_lendo">Estou lendo!</button>
-              <button class="addLista" id="livro1984_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_livro1984">
-                  <input type="search" class="comentarioAdd" id="comentario_livro1984" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="livro1984-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        <div class="modal fade" id="modal_handmaids" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal O conto da aia-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Margaret Atwood</p>
-                <p class="descricao">O romance distópico O conto da aia, de Margaret Atwood, se passa num futuro muito próximo e tem como cenário uma república onde não existem mais jornais, revistas, livros nem filmes. As universidades foram extintas. Também já não há advogados, porque ninguém tem direito a defesa. Os cidadãos considerados criminosos são fuzilados e pendurados mortos no Muro, em praça pública, para servir de exemplo enquanto seus corpos apodrecem à vista de todos. Para merecer esse destino, não é preciso fazer muita coisa – basta, por exemplo, cantar qualquer canção que contenha palavras proibidas pelo regime, como “liberdade”. Nesse Estado teocrático e totalitário, as mulheres são as vítimas preferenciais, anuladas por uma opressão sem precedentes. </p>
-              </div>
-              <button class="addLista" id="handmaids_desejo">Quero ler!</button>
-              <button class="addLista" id="handmaids_lendo">Estou lendo!</button>
-              <button class="addLista" id="handmaids_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_contoAia">
-                  <input type="search" class="comentarioAdd" id="comentario_contoAia" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="contoAia-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        <div class="modal fade" id="modal_milagreManha" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal O milagre da manhã-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Descrição</h4>
-              </div>
-              <div class="modal-body">
-                <p class="autor">Autor(a): Hal Elrod</p>
-                <p class="descricao">Hal Elrod explica os benefícios de acordar cedo e desenvolver todo o nosso potencial e as nossas habilidades. O milagre da manhã permite que o leitor alcance níveis de sucesso jamais imaginados, tanto na vida pessoal quanto profissional. A mudança de hábitos e a nova rotina matinal proposta por Hal vão proporcionar melhorias significativas na saúde, na felicidade, nos relacionamentos, nas finanças, na espiritualidade ou quaisquer outras áreas que necessitem ser aprimoradas. </p>
-              </div>
-              <button class="addLista" id="milagreManha_desejo">Quero ler!</button>
-              <button class="addLista" id="milagreManha_lendo">Estou lendo!</button>
-              <button class="addLista" id="milagreManha_lido">Já li!</button>
-
-              <div class="espaco_comentarios">
-                <h3 class="comentarios">Comentários</h3>
-            
-                <div class="addComentario">
-                  <form autocomplete="off" id="campo_comentario_milagreManha">
-                  <input type="search" class="comentarioAdd" id="comentario_milagreManha" placeholder="Faça um comentário" required> 
-                  <input type="submit" class="btnAdd" value="Comentar">
-                </form>
-                  </div>
-            
-                  <div class="comentarios" id="milagreManha-espaco_comentarios">      
-                    <ul id="messages"></ul>
-                  </div>     
-               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-              </div>
-            </div>            
-          </div>
-        </div> 
-
-        <div class="modal fade" id="modal_poderAcao" role="dialog">
-          <div class="modal-dialog">
-        <!-- Modal O poder da ação-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Descrição</h4>
-          </div>
-          <div class="modal-body">
-            <p class="autor">Autor(a): Paulo Vieira</p>
-            <p class="descricao">Neste livro, Paulo Vieira lhe convida a quebrar o ciclo vicioso e iniciar um caminho de realização. Para isso, ele apresenta o método responsável por impactar 250 mil pessoas ao longo de sua carreira - e que pode ser a chave para o que você tanto procura. No decorrer destas páginas, o autor lhe entrega uma bússola. E para conseguir se guiar por ela você terá de assumir um compromisso com a mudança. Preparado? Aproveite todas as provocações e os desafios propostos nesta obra para conseguir, de fato, fazer o check-up completo sobre si mesmo. </p>
-          </div>
-          <button class="addLista" id="poderAcao_desejo">Quero ler!</button>
-          <button class="addLista" id="poderAcao_lendo">Estou lendo!</button>
-          <button class="addLista" id="poderAcao_lido">Já li!</button>
-
-          <div class="espaco_comentarios">
-            <h3 class="comentarios">Comentários</h3>
-        
-            <div class="addComentario">
-              <form autocomplete="off" id="campo_comentario_poderAcao">
-              <input type="search" class="comentarioAdd" id="comentario_poderAcao" placeholder="Faça um comentário" required> 
-              <input type="submit" class="btnAdd" value="Comentar">
-            </form>
-              </div>
-        
-              <div class="comentarios" id="poderAcao-espaco_comentarios">      
+              <div class="comentarios" id="lista-espaco_comentarios">
                 <ul id="messages"></ul>
-              </div>     
-           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
           </div>
-        </div>        
+        </div>
       </div>
-    </div> 
 
-    <div class="modal fade" id="modal_mindset" role="dialog">
-      <div class="modal-dialog">
-    <!-- Modal Mindset: a nova psicologia do sucesso-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Descrição</h4>
-      </div>
-      <div class="modal-body">
-        <p class="autor">Autor(a): Carol S. Dweck</p>
-        <p class="descricao">Carol S. Dweck, ph.D., professora de psicologia na Universidade Stanford e especialista internacional em sucesso e motivação, desenvolveu, ao longo de décadas de pesquisa, um conceito fundamental: a atitude mental com que encaramos a vida, que ela chama de “mindset”, é crucial para o sucesso. Dweck revela de forma brilhante como o sucesso pode ser alcançado pela maneira como lidamos com nossos objetivos. O mindset não é um mero traço de personalidade, é a explicação de por que somos otimistas ou pessimistas, bem-sucedidos ou não. Ele define nossa relação com o trabalho e com as pessoas e a maneira como educamos nossos filhos. É um fator decisivo para que todo o nosso potencial seja explorado. </p>
-      </div>
-      <button class="addLista" id="mindset_desejo">Quero ler!</button>
-      <button class="addLista" id="mindset_lendo">Estou lendo!</button>
-      <button  class="addLista"id="mindset_lido">Já li!</button>
 
-      <div class="espaco_comentarios">
-        <h3 class="comentarios">Comentários</h3>
-    
-        <div class="addComentario">
-          <form autocomplete="off" id="campo_comentario_mindset">
-          <input type="search" class="comentarioAdd" id="comentario_mindset" placeholder="Faça um comentário" required> 
-          <input type="submit" class="btnAdd" value="Comentar">
-        </form>
+      <div class="modal fade" id="modalHP" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Harry Potter e o Cálice de fogo-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">Verão, Harry Potter, agora com 14 anos, sente sua cicatriz arder durante um sonho
+                bastante real com Lord Voldemort, o qual não consegue esquecer, três dias depois, já em companhia da
+                família Weasley, com quem foi passar o restante das férias, na final da Copa Mundial de Quadribol, os
+                Comensais da Morte, seguidores de Você-Sabe-Quem, reaparecem e alguém conjura a Marca Negra, o sinal de
+                Lord Voldemort, projetando-a no céu pela primeira vez em 13 anos, causando pânico na comunidade mágica.
+              </p>
+            </div>
+            <button class="addLista" id="HP2_desejo">Quero ler!</button>
+            <button class="addLista" id="HP2_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP2_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_hp2">
+                  <input type="search" class="comentarioAdd" id="comentario_hp2" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="hp2-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
           </div>
-    
-          <div class="comentarios" id="mindset-espaco_comentarios">      
-            <ul id="messages"></ul>
-          </div>     
-       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>        
-  </div>
-</div> 
-
-<div class="modal fade" id="modal_poderHabito" role="dialog">
-  <div class="modal-dialog">
-<!-- Modal O poder do hábito-->
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Descrição</h4>
-  </div>
-  <div class="modal-body">
-    <p class="autor">Autor(a): Charles Duhigg</p>
-    <p class="descricao">Durante os últimos dois anos, uma jovem transformou quase todos os aspectos de sua vida. Parou de fumar, correu uma maratona e foi promovida. Em um laboratório, neurologistas descobriram que os padrões dentro do cérebro dela mudaram de maneira fundamental. Publicitários da Procter & Gamble observaram vídeos de pessoas fazendo a cama. Tentavam desesperadamente descobrir como vender um novo produto chamado Febreze, que estava prestes a se tornar um dos maiores fracassos na história da empresa. De repente, um deles detecta um padrão quase imperceptível - e, com uma sutil mudança na campanha publicitária, Febreze começa a vender um bilhão de dólares por anos. </p>
-  </div>
-  <button class="addLista" id="poderHabito_desejo">Quero ler!</button>
-  <button class="addLista" id="poderHabito_lendo">Estou lendo!</button>
-  <button class="addLista" id="poderHabito_lido">Já li!</button>
-
-  <div class="espaco_comentarios">
-    <h3 class="comentarios">Comentários</h3>
-
-    <div class="addComentario">
-      <form autocomplete="off" id="campo_comentario_poderHabito">
-      <input type="search" class="comentarioAdd" id="comentario_poderHabito" placeholder="Faça um comentário" required> 
-      <input type="submit" class="btnAdd" value="Comentar">
-    </form>
+        </div>
       </div>
 
-      <div class="comentarios" id="poderHabito-espaco_comentarios">      
-        <ul id="messages"></ul>
-      </div>     
-   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-  </div>
-</div>        
-</div>
-</div> 
+      <div class="modal fade" id="modalHP3" role="dialog">
+        <div class="modal-dialog">
 
-<div class="modal fade" id="modal_mentirosos" role="dialog">
-  <div class="modal-dialog">
-<!-- Modal Mentirosos-->
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Descrição</h4>
-  </div>
-  <div class="modal-body">
-    <p class="autor">Autor(a): E. Lockhart</p>
-    <p class="descricao">Na família Sinclair, ninguém é carente, criminoso, viciado ou fracassado. Mas talvez isso seja mentira. Os Sinclair são uma família rica e renomada, que se recusa a admitir que está em decadência e se agarra a todo custo às tradições. Assim, todo ano o patriarca, suas três filhas e seus respectivos filhos passam as férias de verão em sua ilha particular. Durante o verão de seus quinze anos, as férias idílicas de Cadence são interrompidas quando a garota sofre um estranho acidente. </p>
-  </div>
-  <button class="addLista" id="mentirosos_desejo">Quero ler!</button>
-  <button class="addLista" id="mentirosos_lendo">Estou lendo!</button>
-  <button class="addLista" id="mentirosos_lido">Já li!</button>
+          <!-- Modal Harry Potter e a Câmara Secreta-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">Após as sofríveis férias na casa dos tios, Harry Potter se prepara para voltar a
+                Hogwarts e começar seu segundo ano na escola de bruxos. Na véspera do início das aulas, a estranha
+                criatura Dobby aparece em seu quarto e o avisa de que voltar é um erro e que algo muito ruim pode
+                acontecer se Harry insistir em continuar os estudos de bruxaria. O garoto, no entanto, está disposto a
+                correr o risco e se livrar do lar problemático.</p>
+            </div>
+            <button class="addLista" id="HP3_desejo">Quero ler!</button>
+            <button class="addLista" id="HP3_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP3_lido">Já li!</button>
 
-  <div class="espaco_comentarios">
-    <h3 class="comentarios">Comentários</h3>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
-    <div class="addComentario">
-      <form autocomplete="off" id="campo_comentario_mentirosos">
-      <input type="search" class="comentarioAdd" id="comentario_mentirosos" placeholder="Faça um comentário" required> 
-      <input type="submit" class="btnAdd" value="Comentar">
-    </form>
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_hp3">
+                  <input type="search" class="comentarioAdd" id="comentario_hp3" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="hp3-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="comentarios" id="mentirosos-espaco_comentarios">      
-        <ul id="messages"></ul>
-      </div>     
-   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-  </div>
-</div>        
-</div>
-</div> 
+      <div class="modal fade" id="modalHP4" role="dialog">
+        <div class="modal-dialog">
 
-<div class="modal fade" id="modal_sutilArte" role="dialog">
-  <div class="modal-dialog">
-<!-- Modal A sutil arte de ligar o foda-se-->
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Descrição</h4>
-  </div>
-  <div class="modal-body">
-    <p class="autor">Autor(a): Mark Manson</p>
-    <p class="descricao">Mark Manson usa toda a sua sagacidade de escritor e seu olhar crítico para propor um novo caminho rumo a uma vida melhor, mais coerente com a realidade e consciente dos nossos limites. E ele faz isso da melhor maneira. Como um verdadeiro amigo, Mark se senta ao seu lado e diz, olhando nos seus olhos: você não é tão especial. Ele conta umas piadas aqui, dá uns exemplos inusitados ali, joga umas verdades na sua cara e pronto, você já se sente muito mais alerta e capaz de enfrentar esse mundo cão. </p>
-  </div>
-  <button class="addLista" id="sutilArte_desejo">Quero ler!</button>
-  <button class="addLista" id="sutilArte_lendo">Estou lendo!</button>
-  <button class="addLista" id="sutilArte_lido">Já li!</button>
+          <!-- Modal Harry Potter e a Ordem da Fênix-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">Neste quinto livro da saga, o protagonista, numa crise típica da adolescência, tem
+                ataques de mau humor com a perseguição da imprensa, que o segue por todos os lugares e chega a inventar
+                declarações que nunca deu. Harry vai enfrentar as investidas de Voldemort sem a proteção de Dumbledore,
+                já que o diretor de Hogwarts é afastado da escola. E vai ser sem a ajuda de seu protetor que o jovem
+                herói enfrentará descobertas sobre a personalidade controversa de seu pai, Tiago Potter, e a morte de
+                alguém muito próximo.</p>
+            </div>
+            <button class="addLista" id="HP4_desejo">Quero ler!</button>
+            <button class="addLista" id="HP4_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP4_lido">Já li!</button>
 
-  <div class="espaco_comentarios">
-    <h3 class="comentarios">Comentários</h3>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
-    <div class="addComentario">
-      <form autocomplete="off" id="campo_comentario_sutilArte">
-      <input type="search" class="comentarioAdd" id="comentario_sutilArte" placeholder="Faça um comentário" required> 
-      <input type="submit" class="btnAdd" value="Comentar">
-    </form>
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_hp4">
+                  <input type="search" class="comentarioAdd" id="comentario_hp4" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="hp4-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="comentarios" id="sutilArte-espaco_comentarios">      
-        <ul id="messages"></ul>
-      </div>     
-   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-  </div>
-</div>        
-</div>
-</div> 
+      <div class="modal fade" id="modalHP5" role="dialog">
+        <div class="modal-dialog">
 
-<div class="modal fade" id="modal_manualAntirracista" role="dialog">
-  <div class="modal-dialog">
-<!-- Modal Pequeno manual antirracista-->
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Descrição</h4>
-  </div>
-  <div class="modal-body">
-    <p class="autor">Autor(a): Djamila Ribeiro</p>
-    <p class="descricao">Neste pequeno manual, a filósofa e ativista Djamila Ribeiro trata de temas como atualidade do racismo, negritude, branquitude, violência racial, cultura, desejos e afetos. Em onze capítulos curtos e contundentes, a autora apresenta caminhos de reflexão para aqueles que queiram aprofundar sua percepção sobre discriminações racistas estruturais e assumir a responsabilidade pela transformação do estado das coisas. Já há muitos anos se solidifica a percepção de que o racismo está arraigado em nossa sociedade, criando desigualdades e abismos sociais: trata-se de um sistema de opressão que nega direitos, e não um simples ato de vontade de um sujeito. Reconhecer as raízes e o impacto do racismo pode ser paralisante. </p>
-  </div>
-  <button class="addLista" id="manualAntirracista_desejo">Quero ler!</button>
-  <button class="addLista" id="manualAntirracista_lendo">Estou lendo!</button>
-  <button class="addLista" id="manualAntirracista_lido">Já li!</button>
+          <!-- Modal Harry Potter e o Prisioneiro de Azkaban-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">As aulas estão de volta à Hogwarts e Harry Potter não vê a hora de embarcar no
+                expresso a vapor que o levará de volta à escola de bruxaria. Mais uma vez suas férias na rua dos
+                Alfeneiros foi triste e solitária. Com muita ação, humor e magia, 'Harry Potter e o prisioneiro de
+                Azkaban' traz de volta o gigante atrapalhado Rúbeo Hagrid, o sábio diretor Alvo Dumbledore, a exigente
+                professora de transformação Minerva MacGonagall e o novo mestre Lupin, que guarda grandes surpresas para
+                Harry.</p>
+            </div>
+            <button class="addLista" id="HP5_desejo">Quero ler!</button>
+            <button class="addLista" id="HP5_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP5_lido">Já li!</button>
 
-  <div class="espaco_comentarios">
-    <h3 class="comentarios">Comentários</h3>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
-    <div class="addComentario">
-      <form autocomplete="off" id="campo_comentario_manualAntirracista">
-      <input type="search" class="comentarioAdd" id="comentario_manualAntirracista" placeholder="Faça um comentário" required> 
-      <input type="submit" class="btnAdd" value="Comentar">
-    </form>
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_hp5">
+                  <input type="search" class="comentarioAdd" id="comentario_hp5" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="hp5-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="comentarios" id="manualAntirracista-espaco_comentarios">      
-        <ul id="messages"></ul>
-      </div>     
-   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-  </div>
-</div>        
-</div>
-</div> 
+      <div class="modal fade" id="modalHP6" role="dialog">
+        <div class="modal-dialog">
 
-<div class="modal fade" id="modal_coragemImperfeito" role="dialog">
-  <div class="modal-dialog">
-<!-- Modal A coragem de ser imperfeito-->
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Descrição</h4>
-  </div>
-  <div class="modal-body">
-    <p class="autor">Autor(a): Brené Brown</p>
-    <p class="descricao">Quando fugimos de emoções como medo, mágoa e decepção, também nos fechamos para o amor, a aceitação e a criatividade. Por isso, as pessoas que se defendem a todo custo do erro e do fracasso acabam se frustrando e se distanciando das experiências marcantes que dão significado à vida. Por outro lado, as que se expõem e se abrem para coisas novas são mais autênticas e realizadas, ainda que se tornem alvo de críticas e de inveja. É preciso lidar com os dois lados da moeda para se ter uma vida plena. Em sua pesquisa pioneira sobre vulnerabilidade, Brené Brown concluiu que fazemos uso de um verdadeiro arsenal contra a vergonha de nos expor e a sensação de não sermos bons o bastante, e que existem estratégias eficazes para serem usadas nesse “desarmamento”. </p>
-  </div>
-  <button class="addLista" id="coragemImperfeito_desejo">Quero ler!</button>
-  <button class="addLista" id="coragemImperfeito_lendo">Estou lendo!</button>
-  <button class="addLista" id="coragemImperfeito_lido">Já li!</button>
+          <!-- Modal Harry Potter e as Relíquias da Morte-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">'Harry Potter e as relíquias da morte', de J.K. Rowling, é o sétimo e último livro da
+                série. Voldemorte está cada vez mais forte e Harry Potter precisa encontrar e aniquilar as Horcruxes
+                para enfraquecer o lorde e poder enfrentálo. Nessa busca desenfreada, contando apenas com os amigos Rony
+                e Hermione, Harry descobre as Relíquias da Morte, que serão úteis na batalha do bem contra o mal.</p>
+            </div>
+            <button class="addLista" id="HP6_desejo">Quero ler!</button>
+            <button class="addLista" id="HP6_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP6_lido">Já li!</button>
 
-  <div class="espaco_comentarios">
-    <h3 class="comentarios">Comentários</h3>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
-    <div class="addComentario">
-      <form autocomplete="off" id="campo_comentario_coragemImperfeito">
-      <input type="search" class="comentarioAdd" id="comentario_coragemImperfeito" placeholder="Faça um comentário" required> 
-      <input type="submit" class="btnAdd" value="Comentar">
-    </form>
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_hp6">
+                  <input type="search" class="comentarioAdd" id="comentario_hp6" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="hp6-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="comentarios" id="coragemImperfeito-espaco_comentarios">      
-        <ul id="messages"></ul>
-      </div>     
-   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-  </div>
-</div>        
-</div>
-</div> 
+      <div class="modal fade" id="modalHP7" role="dialog">
+        <div class="modal-dialog">
 
-</main>
+          <!-- Modal Harry Potter e o Enígma do Príncipe-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): J. K. Rowling</p>
+              <p class="descricao">Harry, que acabou de completar 16 anos, parte rumo ao sexto ano na Escola de Magia e
+                Bruxaria de Hogwarts, animado e ao mesmo tempo apreensivo com a perspectiva de ter aulas particulares
+                com o professor Dumbledore, o diretor da escola e o bruxo mais respeitado em toda comunidade mágica.
+                Harry, longe de ser aquele menino magricela que vivia no quarto debaixo da escada na casa dos tios
+                trouxas, é um dos principais nomes entre aqueles que lutam contra Voldemort, e se vê cada vez mais
+                isolado à medida que os rumores de que ele é O Eleito o único capaz de derrotar o Lorde das Trevas, se
+                espalham pelo mundo dos bruxos.</p>
+            </div>
+            <button class="addLista" id="HP7_desejo">Quero ler!</button>
+            <button class="addLista" id="HP7_lendo">Estou lendo!</button>
+            <button class="addLista" id="HP7_lido">Já li!</button>
 
- <!-- The core Firebase JS SDK is always required and must be listed first -->
- <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
- <!-- TODO: Add SDKs for Firebase products that you want to use -->
- <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
- <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_hp7">
+                  <input type="search" class="comentarioAdd" id="comentario_hp7" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="hp7-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_TortoArado" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Torto Arado-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Itamar Vieira Juniorg</p>
+              <p class="descricao">Um texto épico e lírico, realista e mágico que revela, para além de sua trama, um
+                poderoso elemento de insubordinação social. Nas profundezas do sertão baiano, as irmãs Bibiana e
+                Belonísia encontram uma velha e misteriosa faca na mala guardada sob a cama da avó. Ocorre então um
+                acidente. E para sempre suas vidas estarão ligadas — a ponto de uma precisar ser a voz da outra. Numa
+                trama conduzida com maestria e com uma prosa melodiosa, o romance conta uma história de vida e morte, de
+                combate e redenção.</p>
+            </div>
+            <button class="addLista" id="tortoArado_desejo">Quero ler!</button>
+            <button class="addLista" id="tortoArado_lendo">Estou lendo!</button>
+            <button class="addLista" id="tortoArado_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_tortoArado">
+                  <input type="search" class="comentarioAdd" id="comentario_tortoArado" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="tortoArado-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_homemBabilonia" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal O homem mais rico da babilônia-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): George S. Clason</p>
+              <p class="descricao">O homem mais rico da Babilônia é um clássico sobre como multiplicar riqueza e
+                solucionar problemas financeiros. Baseando-se nos segredos de sucesso dos antigos babilônicos ― os
+                habitantes da cidade mais rica e próspera de seu tempo ―, George S. Clason mostra soluções ao mesmo
+                tempo sábias e muito atuais para evitar a falta de dinheiro, como não desperdiçar recursos durante
+                tempos de opulência, buscar conhecimento e informação em vez de apenas lucro, assegurar uma renda para o
+                futuro, manter a pontualidade no pagamento de dívidas e, sobretudo, cultivar as próprias aptidões,
+                tornando-se cada vez mais habilidoso e consciente.</p>
+            </div>
+            <button class="addLista" id="homemBabilonia_desejo">Quero ler!</button>
+            <button class="addLista" id="homemBabilonia_lendo">Estou lendo!</button>
+            <button class="addLista" id="homemBabilonia_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_homemBabilonia">
+                  <input type="search" class="comentarioAdd" id="comentario_homemBabilonia"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="homemBabilonia-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_mulheresLobo" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Mulheres que correm com os lobos-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Clarissa Pinkola Estés</p>
+              <p class="descricao">Abordando 19 mitos, lendas e contos de fada, como a história do patinho feio e do
+                Barba-Azul, Estés mostra como a natureza instintiva da mulher foi sendo domesticada ao longo dos tempos,
+                num processo que punia todas aquelas que se rebelavam. Segundo a analista, a exemplo das florestas
+                virgens e dos animais silvestres, os instintos foram devastados e os ciclos naturais femininos
+                transformados à força em ritmos artificiais para agradar aos outros. Mas sua energia vital, segundo ela,
+                pode ser restaurada por escavações psíquico-arqueológicas' nas ruínas do mundo subterrâneo.</p>
+            </div>
+            <button class="addLista" id="mulheresLobo_desejo">Quero ler!</button>
+            <button class="addLista" id="mulheresLobo_lendo">Estou lendo!</button>
+            <button class="addLista" id="mulheresLobo_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_mulheresLobo">
+                  <input type="search" class="comentarioAdd" id="comentario_mulheresLobo"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="mulheresLobo-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_garotaLago" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal A garota do lago-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Charlie Donlea</p>
+              <p class="descricao">Summit Lake, uma pequena cidade entre montanhas, é esse tipo de lugar, bucólico e com
+                encantadoras casas dispostas à beira de um longo trecho de água intocada.Duas semanas atrás, a estudante
+                de direito Becca Eckersley foi brutalmente assassinada em uma dessas casas. Filha de um poderoso
+                advogado, Becca estava no auge de sua vida. Atraída instintivamente pela notícia, a repórter Kelsey
+                Castle vai até a cidade para investigar o caso</p>
+            </div>
+            <button class="addLista" id="garotaLago_desejo">Quero ler!</button>
+            <button class="addLista" id="garotaLago_lendo">Estou lendo!</button>
+            <button class="addLista" id="garotaLago_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_garotaLago">
+                  <input type="search" class="comentarioAdd" id="comentario_garotaLago" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="garotaLago-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_PJ1" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Percy Jackson - O ladrão de raios-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Rick Riordan</p>
+              <p class="descricao">Os deuses do Olimpo continuam vivos, em pleno século XXI! Eles ainda se apaixonam por
+                mortais e têm filhos que podem se tornar grandes heróis, mas que acabam, na maioria das vezes,
+                encontrando destinos terríveis nas garras de monstros sem coração. Apenas alguns descobrem sua
+                identidade e conseguem chegar ao Acampamento Meio-Sangue, um acampamento de verão em Long Island
+                dedicado ao treinamento de jovens semideuses. Essa é a revelação que leva Percy Jackson a uma incrível
+                busca para ajudar seu verdadeiro pai - o deus dos mares! -, a evitar uma guerra no Olimpo.</p>
+            </div>
+            <button class="addLista" id="PJ1_desejo">Quero ler!</button>
+            <button class="addLista" id="PJ1_lendo">Estou lendo!</button>
+            <button class="addLista" id="PJ1_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_pj1">
+                  <input type="search" class="comentarioAdd" id="comentario_pj1" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="pj1-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_PJ2" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Percy Jackson - O mar de monstros-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Rick Riordan</p>
+              <p class="descricao">Nessa nova aventura, Percy e seus amigos estão em busca do Velocino de Ouro, único
+                artefato mágico capaz de proteger da destruição seu lugar predileto e, até então, o mais seguro do
+                mundo: o Acampamento Meio-Sangue. Com o envenenamento da árvore de Thalia por um inimigo misterioso, as
+                fronteiras mágicas que protegem o Acampamento estão ameaçadas, e é preciso buscar o antídoto. Assim,
+                nossos heróis partem em uma arriscada e incrível viagem pelo Mar de Monstros, localizado nas coordenadas
+                30-31-75-12: uma referência ao Triângulo das Bermudas. Lá, enfrentam seres fantásticos e muitos perigos
+                e situações inusitadas, que põem à prova seu heroísmo e sua herança – quando Percy irá questionar se ser
+                filho de Poseidon é uma honra ou uma terrível maldição.</p>
+            </div>
+            <button class="addLista" id="PJ2_desejo">Quero ler!</button>
+            <button class="addLista" id="PJ2_lendo">Estou lendo!</button>
+            <button class="addLista" id="PJ2_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_pj2">
+                  <input type="search" class="comentarioAdd" id="comentario_pj2" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="pj2-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_PJ3" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Harry Potter - A maldição do Titã-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Rick Riordan</p>
+              <p class="descricao">Um chamado do amigo Grover deixa Percy a postos para mais uma missão: dois novos
+                meios-sangues foram encontrados, e sua ascendência ainda é desconhecida. Como sempre, Percy sabe que
+                precisará contar com o poder de seus aliados heróis, com sua leal espada Contracorrente... e com uma
+                caroninha da mãe. O que eles ainda não sabem é que os jovens descobertos não são os únicos em perigo:
+                Cronos, o Senhor dos Titãs, arquitetou um de seus planos mais traiçoeiros, e nossos heróis serão presas
+                fáceis. Um monstro ancestral foi despertado – um ser com poder suficiente para destruir o Olimpo –, e
+                Ártemis, a única deusa capaz de encontrá-lo, desapareceu. </p>
+            </div>
+            <button class="addLista" id="PJ3_desejo">Quero ler!</button>
+            <button class="addLista" id="PJ3_lendo">Estou lendo!</button>
+            <button class="addLista" id="PJ3_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_pj3">
+                  <input type="search" class="comentarioAdd" id="comentario_pj3" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="pj3-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_PJ4" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Percy Jackson - A batalha do labirinto-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Rick Riordan</p>
+              <p class="descricao">O Monte Olimpo está em perigo. Cronos, o perverso titã que foi destronado e feito em
+                pedaços pelos doze deuses olimpianos, prepara um retorno triunfal. O primeiro passo de suas tropas será
+                atacar e destruir o campo de treinamento dos heróis, filhos de deuses com mortais, que desde a Grécia
+                Antiga combatem na linha de frente em defesa dos olimpianos. Para assegurar que o refúgio de semideuses,
+                o Acampamento Meio-Sangue, não seja invadido, Percy Jackson, Tyson, Annabeth e Grover são destacados
+                para uma importante missão: deter as forças de Cronos antes que se aproximem do acampamento, no
+                emaranhado de corredores do temido Labirinto de Dédalo – um interminável universo subterrâneo que, a
+                cada curva, revela as mais aterrorizantes surpresas. </p>
+            </div>
+            <button class="addLista" id="PJ4_desejo">Quero ler!</button>
+            <button class="addLista" id="PJ4_lendo">Estou lendo!</button>
+            <button class="addLista" id="PJ4_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_pj4">
+                  <input type="search" class="comentarioAdd" id="comentario_pj4" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="pj4-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_PJ5" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Percy Jackson - O último olimpiano-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Rick Riordan</p>
+              <p class="descricao">Os meios-sangues e semideuses passaram todo o ano preparando-se para a batalha contra
+                os Titãs, e sabem que as chances de vitória são pequenas. O exército de Cronos está mais poderoso que
+                nunca, e cada novo deus ou meio-sangue que se une à causa confere mais força ao vingativo titã. Enquanto
+                os Olimpianos se ocupam de conter a fúria do monstro Tifão, Cronos avança em direção à cidade de Nova
+                York, onde o Monte Olimpo está precariamente vigiado. Agora, apenas Percy Jackson e seu exército de
+                heróis podem deter o Senhor do Tempo. </p>
+            </div>
+            <button class="addLista" id="PJ5_desejo">Quero ler!</button>
+            <button class="addLista" id="PJ5_lendo">Estou lendo!</button>
+            <button class="addLista" id="PJ5_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_pj5">
+                  <input type="search" class="comentarioAdd" id="comentario_pj5" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="pj5-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
- <script>
-     // Your web app's Firebase configuration
-     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-     var firebaseConfig = {
-       apiKey: "AIzaSyAhbDzN276AmUuofyfq8UGk0lvRl9bf5oI",
-       authDomain: "bookhour-35976.firebaseapp.com",
-       projectId: "bookhour-35976",
-       storageBucket: "bookhour-35976.appspot.com",
-       messagingSenderId: "27768291597",
-       appId: "1:27768291597:web:a4ee4b37f8faf267b67044",
-       measurementId: "G-47C0P0B0LP"
-     };
-     // Initialize Firebase
-     firebase.initializeApp(firebaseConfig);
+      <div class="modal fade" id="modal_revolucaoBichos" role="dialog">
+        <div class="modal-dialog">
 
-     const auth = firebase.auth();
-     const fs = firebase.firestore();
-     const db = firebase.firestore();
-   </script>
+          <!-- Modal A revolução dos bichos-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): George Orwell</p>
+              <p class="descricao">Escrita em plena Segunda Guerra Mundial e publicada em 1945 depois de ter sido
+                rejeitada por várias editoras, essa pequena narrativa causou desconforto ao satirizar ferozmente a
+                ditadura stalinista numa época em que os soviéticos ainda eram aliados do Ocidente na luta contra o eixo
+                nazifascista. De fato, são claras as referências: o despótico Napoleão seria Stálin, o banido
+                Bola-de-Neve seria Trotsky, e os eventos políticos - expurgos, instituição de um estado policial,
+                deturpação tendenciosa da História - mimetizam os que estavam em curso na União Soviética. Com o
+                acirramento da Guerra Fria, as mesmas razões que causaram constrangimento na época de sua publicação
+                levaram A revolução dos bichos a ser amplamente usada pelo Ocidente nas décadas seguintes como arma
+                ideológica contra o comunismo.</p>
+            </div>
+            <button class="addLista" id="revolucaoBichos_desejo">Quero ler!</button>
+            <button class="addLista" id="revolucaoBichos_lendo">Estou lendo!</button>
+            <button class="addLista" id="revolucaoBichos_lido">Já li!</button>
 
-    <script src="../javascript/filtraLista.js"></script>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
-    <script src="../javascript/comentarios/comentarios.js"></script>
-    <script src="../javascript/comentarios/comentarios_hp2.js"></script>
-    <script src="../javascript/comentarios/comentarios_hp3.js"></script>
-    <script src="../javascript/comentarios/comentarios_hp4.js"></script>
-    <script src="../javascript/comentarios/comentarios_hp5.js"></script>
-    <script src="../javascript/comentarios/comentarios_hp6.js"></script>
-    <script src="../javascript/comentarios/comentarios_hp7.js"></script>
-    <script src="../javascript/comentarios/comentarios_tortoArado.js"></script>
-    <script src="../javascript/comentarios/comentarios_homemBabilonia.js"></script>
-    <script src="../javascript/comentarios/comentarios_mulheresLobo.js"></script>
-    <script src="../javascript/comentarios/comentarios_garotaLago.js"></script>
-    <script src="../javascript/comentarios/comentarios_pj1.js"></script>
-    <script src="../javascript/comentarios/comentarios_pj2.js"></script>
-    <script src="../javascript/comentarios/comentarios_pj3.js"></script>
-    <script src="../javascript/comentarios/comentarios_pj4.js"></script>
-    <script src="../javascript/comentarios/comentarios_pj5.js"></script>
-    <script src="../javascript/comentarios/comentarios_revolucaoBichos.js"></script>
-    <script src="../javascript/comentarios/comentarios_livro1984.js"></script>
-    <script src="../javascript/comentarios/comentarios_contoAia.js"></script>
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_revolucaoBichos">
+                  <input type="search" class="comentarioAdd" id="comentario_revolucaoBichos"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
 
-    <script src="../javascript/comentarios/comentarios_milagreManha.js"></script>
-    <script src="../javascript/comentarios/comentarios_poderAcao.js"></script>
-    <script src="../javascript/comentarios/comentarios_mindset.js"></script>
-    <script src="../javascript/comentarios/comentarios_poderHabito.js"></script>
-    <script src="../javascript/comentarios/comentarios_mentirosos.js"></script>
-    <script src="../javascript/comentarios/comentarios_sutilArte.js"></script>
-    <script src="../javascript/comentarios/comentarios_manualAntirracista.js"></script>
-    <script src="../javascript/comentarios/comentarios_coragemImperfeito.js"></script>
+              <div class="comentarios" id="revolucaoBichos-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="../javascript/counter.js"></script>
+      <div class="modal fade" id="modal_1984" role="dialog">
+        <div class="modal-dialog">
 
-    <script src="../javascript/livrosDesejados.js"></script>
+          <!-- Modal 1984-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): George Orwell</p>
+              <p class="descricao">Winston, herói de 1984, último romance de George Orwell, vive aprisionado na
+                engrenagem totalitária de uma sociedade completamente dominada pelo Estado, onde tudo é feito
+                coletivamente, mas cada qual vive sozinho. Ninguém escapa à vigilância do Grande Irmão, a mais famosa
+                personificação literária de um poder cínico e cruel ao infinito, além de vazio de sentido histórico.</p>
+            </div>
+            <button class="addLista" id="livro1984_desejo">Quero ler!</button>
+            <button class="addLista" id="livro1984_lendo">Estou lendo!</button>
+            <button class="addLista" id="livro1984_lido">Já li!</button>
 
-    <script src="../javascript/livrosLidos_button.js"></script>
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
 
-    <script src="../javascript/livrosLendo_button.js"></script>
-   
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_livro1984">
+                  <input type="search" class="comentarioAdd" id="comentario_livro1984" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="livro1984-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_handmaids" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal O conto da aia-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Margaret Atwood</p>
+              <p class="descricao">O romance distópico O conto da aia, de Margaret Atwood, se passa num futuro muito
+                próximo e tem como cenário uma república onde não existem mais jornais, revistas, livros nem filmes. As
+                universidades foram extintas. Também já não há advogados, porque ninguém tem direito a defesa. Os
+                cidadãos considerados criminosos são fuzilados e pendurados mortos no Muro, em praça pública, para
+                servir de exemplo enquanto seus corpos apodrecem à vista de todos. Para merecer esse destino, não é
+                preciso fazer muita coisa – basta, por exemplo, cantar qualquer canção que contenha palavras proibidas
+                pelo regime, como “liberdade”. Nesse Estado teocrático e totalitário, as mulheres são as vítimas
+                preferenciais, anuladas por uma opressão sem precedentes. </p>
+            </div>
+            <button class="addLista" id="handmaids_desejo">Quero ler!</button>
+            <button class="addLista" id="handmaids_lendo">Estou lendo!</button>
+            <button class="addLista" id="handmaids_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_contoAia">
+                  <input type="search" class="comentarioAdd" id="comentario_contoAia" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="contoAia-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_milagreManha" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal O milagre da manhã-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Hal Elrod</p>
+              <p class="descricao">Hal Elrod explica os benefícios de acordar cedo e desenvolver todo o nosso potencial
+                e as nossas habilidades. O milagre da manhã permite que o leitor alcance níveis de sucesso jamais
+                imaginados, tanto na vida pessoal quanto profissional. A mudança de hábitos e a nova rotina matinal
+                proposta por Hal vão proporcionar melhorias significativas na saúde, na felicidade, nos relacionamentos,
+                nas finanças, na espiritualidade ou quaisquer outras áreas que necessitem ser aprimoradas. </p>
+            </div>
+            <button class="addLista" id="milagreManha_desejo">Quero ler!</button>
+            <button class="addLista" id="milagreManha_lendo">Estou lendo!</button>
+            <button class="addLista" id="milagreManha_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_milagreManha">
+                  <input type="search" class="comentarioAdd" id="comentario_milagreManha"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="milagreManha-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_poderAcao" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal O poder da ação-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Paulo Vieira</p>
+              <p class="descricao">Neste livro, Paulo Vieira lhe convida a quebrar o ciclo vicioso e iniciar um caminho
+                de realização. Para isso, ele apresenta o método responsável por impactar 250 mil pessoas ao longo de
+                sua carreira - e que pode ser a chave para o que você tanto procura. No decorrer destas páginas, o autor
+                lhe entrega uma bússola. E para conseguir se guiar por ela você terá de assumir um compromisso com a
+                mudança. Preparado? Aproveite todas as provocações e os desafios propostos nesta obra para conseguir, de
+                fato, fazer o check-up completo sobre si mesmo. </p>
+            </div>
+            <button class="addLista" id="poderAcao_desejo">Quero ler!</button>
+            <button class="addLista" id="poderAcao_lendo">Estou lendo!</button>
+            <button class="addLista" id="poderAcao_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_poderAcao">
+                  <input type="search" class="comentarioAdd" id="comentario_poderAcao" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="poderAcao-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_mindset" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal Mindset: a nova psicologia do sucesso-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Carol S. Dweck</p>
+              <p class="descricao">Carol S. Dweck, ph.D., professora de psicologia na Universidade Stanford e
+                especialista internacional em sucesso e motivação, desenvolveu, ao longo de décadas de pesquisa, um
+                conceito fundamental: a atitude mental com que encaramos a vida, que ela chama de “mindset”, é crucial
+                para o sucesso. Dweck revela de forma brilhante como o sucesso pode ser alcançado pela maneira como
+                lidamos com nossos objetivos. O mindset não é um mero traço de personalidade, é a explicação de por que
+                somos otimistas ou pessimistas, bem-sucedidos ou não. Ele define nossa relação com o trabalho e com as
+                pessoas e a maneira como educamos nossos filhos. É um fator decisivo para que todo o nosso potencial
+                seja explorado. </p>
+            </div>
+            <button class="addLista" id="mindset_desejo">Quero ler!</button>
+            <button class="addLista" id="mindset_lendo">Estou lendo!</button>
+            <button class="addLista" id="mindset_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_mindset">
+                  <input type="search" class="comentarioAdd" id="comentario_mindset" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="mindset-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_poderHabito" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal O poder do hábito-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Charles Duhigg</p>
+              <p class="descricao">Durante os últimos dois anos, uma jovem transformou quase todos os aspectos de sua
+                vida. Parou de fumar, correu uma maratona e foi promovida. Em um laboratório, neurologistas descobriram
+                que os padrões dentro do cérebro dela mudaram de maneira fundamental. Publicitários da Procter & Gamble
+                observaram vídeos de pessoas fazendo a cama. Tentavam desesperadamente descobrir como vender um novo
+                produto chamado Febreze, que estava prestes a se tornar um dos maiores fracassos na história da empresa.
+                De repente, um deles detecta um padrão quase imperceptível - e, com uma sutil mudança na campanha
+                publicitária, Febreze começa a vender um bilhão de dólares por anos. </p>
+            </div>
+            <button class="addLista" id="poderHabito_desejo">Quero ler!</button>
+            <button class="addLista" id="poderHabito_lendo">Estou lendo!</button>
+            <button class="addLista" id="poderHabito_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_poderHabito">
+                  <input type="search" class="comentarioAdd" id="comentario_poderHabito"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="poderHabito-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_mentirosos" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal Mentirosos-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): E. Lockhart</p>
+              <p class="descricao">Na família Sinclair, ninguém é carente, criminoso, viciado ou fracassado. Mas talvez
+                isso seja mentira. Os Sinclair são uma família rica e renomada, que se recusa a admitir que está em
+                decadência e se agarra a todo custo às tradições. Assim, todo ano o patriarca, suas três filhas e seus
+                respectivos filhos passam as férias de verão em sua ilha particular. Durante o verão de seus quinze
+                anos, as férias idílicas de Cadence são interrompidas quando a garota sofre um estranho acidente. </p>
+            </div>
+            <button class="addLista" id="mentirosos_desejo">Quero ler!</button>
+            <button class="addLista" id="mentirosos_lendo">Estou lendo!</button>
+            <button class="addLista" id="mentirosos_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_mentirosos">
+                  <input type="search" class="comentarioAdd" id="comentario_mentirosos" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="mentirosos-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_sutilArte" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal A sutil arte de ligar o foda-se-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Mark Manson</p>
+              <p class="descricao">Mark Manson usa toda a sua sagacidade de escritor e seu olhar crítico para propor um
+                novo caminho rumo a uma vida melhor, mais coerente com a realidade e consciente dos nossos limites. E
+                ele faz isso da melhor maneira. Como um verdadeiro amigo, Mark se senta ao seu lado e diz, olhando nos
+                seus olhos: você não é tão especial. Ele conta umas piadas aqui, dá uns exemplos inusitados ali, joga
+                umas verdades na sua cara e pronto, você já se sente muito mais alerta e capaz de enfrentar esse mundo
+                cão. </p>
+            </div>
+            <button class="addLista" id="sutilArte_desejo">Quero ler!</button>
+            <button class="addLista" id="sutilArte_lendo">Estou lendo!</button>
+            <button class="addLista" id="sutilArte_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_sutilArte">
+                  <input type="search" class="comentarioAdd" id="comentario_sutilArte" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="sutilArte-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_manualAntirracista" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal Pequeno manual antirracista-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Djamila Ribeiro</p>
+              <p class="descricao">Neste pequeno manual, a filósofa e ativista Djamila Ribeiro trata de temas como
+                atualidade do racismo, negritude, branquitude, violência racial, cultura, desejos e afetos. Em onze
+                capítulos curtos e contundentes, a autora apresenta caminhos de reflexão para aqueles que queiram
+                aprofundar sua percepção sobre discriminações racistas estruturais e assumir a responsabilidade pela
+                transformação do estado das coisas. Já há muitos anos se solidifica a percepção de que o racismo está
+                arraigado em nossa sociedade, criando desigualdades e abismos sociais: trata-se de um sistema de
+                opressão que nega direitos, e não um simples ato de vontade de um sujeito. Reconhecer as raízes e o
+                impacto do racismo pode ser paralisante. </p>
+            </div>
+            <button class="addLista" id="manualAntirracista_desejo">Quero ler!</button>
+            <button class="addLista" id="manualAntirracista_lendo">Estou lendo!</button>
+            <button class="addLista" id="manualAntirracista_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_manualAntirracista">
+                  <input type="search" class="comentarioAdd" id="comentario_manualAntirracista"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="manualAntirracista-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_coragemImperfeito" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal A coragem de ser imperfeito-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Brené Brown</p>
+              <p class="descricao">Quando fugimos de emoções como medo, mágoa e decepção, também nos fechamos para o
+                amor, a aceitação e a criatividade. Por isso, as pessoas que se defendem a todo custo do erro e do
+                fracasso acabam se frustrando e se distanciando das experiências marcantes que dão significado à vida.
+                Por outro lado, as que se expõem e se abrem para coisas novas são mais autênticas e realizadas, ainda
+                que se tornem alvo de críticas e de inveja. É preciso lidar com os dois lados da moeda para se ter uma
+                vida plena. Em sua pesquisa pioneira sobre vulnerabilidade, Brené Brown concluiu que fazemos uso de um
+                verdadeiro arsenal contra a vergonha de nos expor e a sensação de não sermos bons o bastante, e que
+                existem estratégias eficazes para serem usadas nesse “desarmamento”. </p>
+            </div>
+            <button class="addLista" id="coragemImperfeito_desejo">Quero ler!</button>
+            <button class="addLista" id="coragemImperfeito_lendo">Estou lendo!</button>
+            <button class="addLista" id="coragemImperfeito_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_coragemImperfeito">
+                  <input type="search" class="comentarioAdd" id="comentario_coragemImperfeito"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="coragemImperfeito-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_ventosUivantes" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal O morro dos ventos uivantes-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Emily Brontë</p>
+              <p class="descricao">Único romance da escritora inglesa Emily Bronte, O morro dos ventos uivantes retrata
+                uma trágica historia de amor e obsessão em que os personagens principais são a obstinada e geniosa
+                Catherine Earnshaw e seu irmão adotivo, Heathcliff. Grosseiro, humilhado e rejeitado, ele guarda apenas
+                rancor no coração, mas tem com Catherine um relaciona- mento marcado por amor e, ao mesmo tempo, ódio.
+                Essa ligação perdura mesmo com o casamento de Catherine com Edgar Linton. </p>
+            </div>
+            <button class="addLista" id="ventosUivantes_desejo">Quero ler!</button>
+            <button class="addLista" id="ventosUivantes_lendo">Estou lendo!</button>
+            <button class="addLista" id="ventosUivantes_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_ventosUivantes">
+                  <input type="search" class="comentarioAdd" id="comentario_ventosUivantes"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="ventosUivantes-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_orgulhoPreconceito" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal Orgulho e Preconceito-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Jane Austen</p>
+              <p class="descricao">Orgulho e preconceito é o livro mais famoso de Jane Austen e possui uma série de
+                personagens inesquecíveis e um enredo memorável. Austen nos apresenta Elizabeth Bennet como heroína
+                irresistível e seu pretendente aristocrático, o sr. Darcy. Nesse livro, aspectos diferentes são
+                abordados: orgulho encontra preconceito, ascendência social confronta desprezo social, equívocos e
+                julgamentos antecipados conduzem alguns personagens ao sofrimento e ao escândalo. O livro pode ser
+                considerado a obra-prima da escritora, que equilibra comédia com seriedade, observação meticulosa das
+                atitudes humanas e sua ironia refinada. A nova coleção possui capa dura e estilo inspirado nos bullet
+                journals. </p>
+            </div>
+            <button class="addLista" id="orgulhoPreconceito_desejo">Quero ler!</button>
+            <button class="addLista" id="orgulhoPreconceito_lendo">Estou lendo!</button>
+            <button class="addLista" id="orgulhoPreconceito_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_orgulhoPreconceito">
+                  <input type="search" class="comentarioAdd" id="comentario_orgulhoPreconceito"
+                    placeholder="Faça um comentário" required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="orgulhoPreconceito-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_iluminado" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal Orgulho e Preconceito-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Stephen King</p>
+              <p class="descricao">O romance, magistralmente levado ao cinema por Stanley Kubrick, continua apaixonando
+                (e aterrorizando) novas gerações de leitores. A luta assustadora entre dois mundos. Um menino e o desejo
+                assassino de poderosas forças malignas. Uma família refém do mal. Nesta guerra sem testemunhas, vencerá
+                o mais forte. Danny Torrance não é um menino comum. É capaz de ouvir pensamentos e transportar-se no
+                tempo. Danny é iluminado. Será uma maldição ou uma bênção? A resposta pode estar guardada na imponência
+                assustadora do hotel Overlook. Em O iluminado, quando Jack Torrance consegue o emprego de zelador no
+                velho hotel, todos os problemas da família parecem estar solucionados. Não mais o desemprego e as noites
+                de bebedeiras. Não mais o sofrimento da esposa, Wendy. Tranquilidade e ar puro para o pequeno Danny
+                livrar-se das convulsões que assustam a família. Só que o Overlook não é um hotel comum. O tempo
+                esqueceu-se de enterrar velhos ódios e de cicatrizar antigas feridas, e espíritos malignos ainda residem
+                nos corredores. O hotel é uma chaga aberta de ressentimento e desejo de vingança. É uma sentença de
+                morte. E somente os poderes de Danny podem fazer frente à disseminação do mal. </p>
+            </div>
+            <button class="addLista" id="iluminado_desejo">Quero ler!</button>
+            <button class="addLista" id="iluminado_lendo">Estou lendo!</button>
+            <button class="addLista" id="iluminado_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_iluminado">
+                  <input type="search" class="comentarioAdd" id="comentario_iluminado" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="iluminado-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_it" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal It: A coisa-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Descrição</h4>
+            </div>
+            <div class="modal-body">
+              <p class="autor">Autor(a): Stephen King</p>
+              <p class="descricao">Durante as férias de 1958, em uma pacata cidadezinha do Maine, Bill, Richie, Stan,
+                Mike, Eddie, Ben e Beverly aprenderam o real sentido da amizade, do amor, da confiança... e do medo. O
+                mais profundo e tenebroso medo. Naquele verão, eles enfrentaram pela primeira vez a Coisa, um ser
+                sobrenatural e maligno que deixou terríveis marcas de sangue em Derry. Quase trinta anos depois, os
+                amigos voltam a se encontrar. Uma nova onda de terror tomou a pequena cidade. Mike Hanlon, o único que
+                permaneceu em Derry, dá o sinal. Precisam unir forças novamente. A Coisa volta a atacar e eles devem
+                cumprir a promessa selada com sangue que fizeram quando crianças. Só eles têm a chave do enigma. Só eles
+                sabem o que se esconde nas entranhas de Derry. O tempo é curto, mas somente eles podem vencer a Coisa.
+                Neste clássico de Stephen King, os amigos irão até o fim, mesmo que isso signifique ultrapassar os
+                próprios limites. </p>
+            </div>
+            <button class="addLista" id="it_desejo">Quero ler!</button>
+            <button class="addLista" id="it_lendo">Estou lendo!</button>
+            <button class="addLista" id="it_lido">Já li!</button>
+
+            <div class="espaco_comentarios">
+              <h3 class="comentarios">Comentários</h3>
+
+              <div class="addComentario">
+                <form autocomplete="off" id="campo_comentario_it">
+                  <input type="search" class="comentarioAdd" id="comentario_it" placeholder="Faça um comentário"
+                    required>
+                  <input type="submit" class="btnAdd" value="Comentar">
+                </form>
+              </div>
+
+              <div class="comentarios" id="it-espaco_comentarios">
+                <ul id="messages"></ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyAhbDzN276AmUuofyfq8UGk0lvRl9bf5oI",
+      authDomain: "bookhour-35976.firebaseapp.com",
+      projectId: "bookhour-35976",
+      storageBucket: "bookhour-35976.appspot.com",
+      messagingSenderId: "27768291597",
+      appId: "1:27768291597:web:a4ee4b37f8faf267b67044",
+      measurementId: "G-47C0P0B0LP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const fs = firebase.firestore();
+    const db = firebase.firestore();
+  </script>
+
+  <script src="../javascript/filtraLista.js"></script>
+
+  <script src="../javascript/comentarios/comentarios.js"></script>
+  <script src="../javascript/comentarios/comentarios_hp2.js"></script>
+  <script src="../javascript/comentarios/comentarios_hp3.js"></script>
+  <script src="../javascript/comentarios/comentarios_hp4.js"></script>
+  <script src="../javascript/comentarios/comentarios_hp5.js"></script>
+  <script src="../javascript/comentarios/comentarios_hp6.js"></script>
+  <script src="../javascript/comentarios/comentarios_hp7.js"></script>
+  <script src="../javascript/comentarios/comentarios_tortoArado.js"></script>
+  <script src="../javascript/comentarios/comentarios_homemBabilonia.js"></script>
+  <script src="../javascript/comentarios/comentarios_mulheresLobo.js"></script>
+  <script src="../javascript/comentarios/comentarios_garotaLago.js"></script>
+  <script src="../javascript/comentarios/comentarios_pj1.js"></script>
+  <script src="../javascript/comentarios/comentarios_pj2.js"></script>
+  <script src="../javascript/comentarios/comentarios_pj3.js"></script>
+  <script src="../javascript/comentarios/comentarios_pj4.js"></script>
+  <script src="../javascript/comentarios/comentarios_pj5.js"></script>
+  <script src="../javascript/comentarios/comentarios_revolucaoBichos.js"></script>
+  <script src="../javascript/comentarios/comentarios_livro1984.js"></script>
+  <script src="../javascript/comentarios/comentarios_contoAia.js"></script>
+
+  <script src="../javascript/comentarios/comentarios_milagreManha.js"></script>
+  <script src="../javascript/comentarios/comentarios_poderAcao.js"></script>
+  <script src="../javascript/comentarios/comentarios_mindset.js"></script>
+  <script src="../javascript/comentarios/comentarios_poderHabito.js"></script>
+  <script src="../javascript/comentarios/comentarios_mentirosos.js"></script>
+  <script src="../javascript/comentarios/comentarios_sutilArte.js"></script>
+  <script src="../javascript/comentarios/comentarios_manualAntirracista.js"></script>
+  <script src="../javascript/comentarios/comentarios_coragemImperfeito.js"></script>
+  <script src="../javascript/comentarios/comentarios_ventosUivantes.js"></script>
+  <script src="../javascript/comentarios/comentarios_orgulhoPreconceito.js"></script>
+  <script src="../javascript/comentarios/comentarios_iluminado.js"></script>
+  <script src="../javascript/comentarios/comentarios_it.js"></script>
+
+  <script src="../javascript/counter.js"></script>
+
+  <script src="../javascript/livrosDesejados.js"></script>
+
+  <script src="../javascript/livrosLidos_button.js"></script>
+
+  <script src="../javascript/livrosLendo_button.js"></script>
+
 </body>
+
 </html>

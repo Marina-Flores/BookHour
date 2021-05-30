@@ -47,7 +47,14 @@ function renderizarDados (docIndividual){
     || docIndividual.data().mentirosos_lendo
     || docIndividual.data().sutilArte_lendo
     || docIndividual.data().manualAntirracista_lendo
-    || docIndividual.data().coragemImperfeito_lendo;
+    || docIndividual.data().coragemImperfeito_lendo
+    || docIndividual.data().ventosUivantes_lendo
+    || docIndividual.data().orgulhoPreconceito_lendo
+    || docIndividual.data().iluminado_lendo
+    || docIndividual.data().it_lendo;
+
+
+
 
     //botao
     let lixo = document.createElement("button");    

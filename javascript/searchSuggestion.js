@@ -1,10 +1,11 @@
 function autocomplete(inp, arr) {
 
-    /*the autocomplete function takes two arguments,
-    the text field element and an array of possible autocompleted values:*/
+   
+  /*a função autocomplete pega dois argumentos, 
+  o text field element e um array de valores de possibilidades*/
 
     var currentFocus;
-    /*execute a function when someone writes in the text field:*/
+    /*executar a função quando alguem escreve no text field*/
 
     inp.addEventListener("input", function(e) {
         var a, b, i, val = this.value;
@@ -14,39 +15,38 @@ function autocomplete(inp, arr) {
         if (!val) { return false;}
         currentFocus = -1;
 
-        /*create a DIV element that will contain the items (values):*/
+        /*criar um elemento div que irá conter todos os valores do array:*/
         a = document.createElement("DIV");
         a.setAttribute("id", this.id + "autocomplete-list");
         a.setAttribute("class", "autocomplete-items");
 
       
-        /*append the DIV element as a child of the autocomplete container:*/
+        /*append o elemento div como um filho do autocomplete container:*/
         this.parentNode.appendChild(a);
 
-        /*for each item in the array...*/
+        /*para cada item do array...*/
         for (i = 0; i < arr.length; i++) {
 
-          /*check if the item starts with the same letters as the text field value:*/
+          /*checando se o item começa com as mesmas letras do texto digitado*/
           if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
 
-            /*create a DIV element for each matching element:*/
+            /*criar um elemento div para cada elemento que combina:*/
             b = document.createElement("DIV");
 
-            /*make the matching letters bold:*/
+            /*deixar as letras que combinam em negrito:*/
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].substr(val.length);
 
             /*insert a input field that will hold the current array item's value:*/
             b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
 
-            /*execute a function when someone clicks on the item value (DIV element):*/
+            /*executa a função quando alguem clica no item (elemento)*/
             b.addEventListener("click", function(e) {
 
-                /*insert the value for the autocomplete text field:*/
+                /*inserindo o valor no input*/
                 inp.value = this.getElementsByTagName("input")[0].value;
 
-                /*close the list of autocompleted values,
-                (or any other open lists of autocompleted values:*/
+                /*fechando lista de itens*/
                 closeAllLists();
             });
             a.appendChild(b);
@@ -110,8 +110,8 @@ function autocomplete(inp, arr) {
     });
   }
   
-  /*An array containing all the country names in the world:*/
-  var countries = [
+  /*An array containing all the titles names in the world:*/
+  var titulos = [
       "Harry Potter e a Pedra Filosofal",
       "Harry Potter e o Enígma do Príncipe",
       "Harry Potter e o Cálice de Fogo",
@@ -128,25 +128,30 @@ function autocomplete(inp, arr) {
       "Percy Jackson - A maldição do Titã",
       "Percy Jackson - A batalha do labirinto",
       "Percy Jackson - O último olímpiano",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      "A revolução dos bichos",
+      "1984",
+      "O conto da aia",
+      "O milagre da manhã",
+      "O poder da ação",
+      "Mindset",
+      "O poder do hábito",
+      "Mentirosos",
+      "A sutil arte de ligar o foda-se",
+      "Pequeno manual antirracista",
+      "A coragem de ser imperfeito",
+      "O morro dos ventos uivantes",
+      "Orgulho e Preconceito",
+      "O iluminado",
+      "It: A coisa",
+
 
 
      ];
   
-  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-  autocomplete(document.getElementById("todos"), countries);
-  autocomplete(document.getElementById("lendo"), countries);
-  autocomplete(document.getElementById("lido"), countries);
+  /*initiate the autocomplete function on the "myInput" element, and pass along the titulos array as possible autocomplete values:*/
+  autocomplete(document.getElementById("todos"), titulos);
+  autocomplete(document.getElementById("lendo"), titulos);
+  autocomplete(document.getElementById("lido"), titulos);
 
 
  

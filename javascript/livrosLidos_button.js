@@ -571,3 +571,87 @@
                   }
               })
               })
+
+              //adicionando O morro dos ventos uivantes pelo button no database firestore
+              const ventosUivantes_lido = document.getElementById('ventosUivantes_lido');
+              ventosUivantes_lido.addEventListener('click', function(){
+                  const ventosUivantes_lido = "O morro dos ventos uivantes";
+              let id = counter += 1; 
+              auth.onAuthStateChanged(user => {
+                  if(user) {
+                      fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
+                          id: '_' + id, 
+                          ventosUivantes_lido
+                      }).then ( () => {
+                          alert('O morro dos ventos uivantes adicionado à lista de lidos'); 
+                      }).catch(err => {
+                          console.log(err.message);
+                      })
+                  }else {
+                      //console.log('user is not signed in to add livros')
+                  }
+              })
+              })
+
+               //adicionando Orgulho e Preconceito pelo button no database firestore
+               const orgulhoPreconceito_lido = document.getElementById('orgulhoPreconceito_lido');
+               orgulhoPreconceito_lido.addEventListener('click', function(){
+                   const orgulhoPreconceito_lido = "Orgulho e Preconceito";
+               let id = counter += 1; 
+               auth.onAuthStateChanged(user => {
+                   if(user) {
+                       fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
+                           id: '_' + id, 
+                           orgulhoPreconceito_lido
+                       }).then ( () => {
+                           alert('Orgulho e Preconceito adicionado à lista de lidos'); 
+                       }).catch(err => {
+                           console.log(err.message);
+                       })
+                   }else {
+                       //console.log('user is not signed in to add livros')
+                   }
+               })
+               })
+
+               //adicionando O iluminado pelo button no database firestore
+               const iluminado_lido = document.getElementById('iluminado_lido');
+               iluminado_lido.addEventListener('click', function(){
+                   const iluminado_lido = "O iluminado";
+               let id = counter += 1; 
+               auth.onAuthStateChanged(user => {
+                   if(user) {
+                       fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
+                           id: '_' + id, 
+                           iluminado_lido
+                       }).then ( () => {
+                           alert('O iluminado adicionado à lista de lidos'); 
+                       }).catch(err => {
+                           console.log(err.message);
+                       })
+                   }else {
+                       //console.log('user is not signed in to add livros')
+                   }
+               })
+               })
+
+               //adicionando It: A coisa pelo button no database firestore
+               const it_lido = document.getElementById('it_lido');
+               it_lido.addEventListener('click', function(){
+                   const it_lido = "It: A coisa";
+               let id = counter += 1; 
+               auth.onAuthStateChanged(user => {
+                   if(user) {
+                       fs.collection('Livros lidos' + ' ' + user.uid).doc('_' + id).set({
+                           id: '_' + id, 
+                           it_lido
+                       }).then ( () => {
+                           alert('It: A coisa adicionado à lista de lidos'); 
+                       }).catch(err => {
+                           console.log(err.message);
+                       })
+                   }else {
+                       //console.log('user is not signed in to add livros')
+                   }
+               })
+               })

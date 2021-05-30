@@ -41,16 +41,19 @@ $(document).ready(function(){
         } else {
             $('#pai').children('.Literatura_fantastica').show();
         }
+
         if(selectValor != 'ficcao'){
             $('#pai').children('.ficcao').hide();
         } else {
             $('#pai').children('.ficcao').show();
         }
+
         if(selectValor != 'autoajuda'){
             $('#pai').children('.autoajuda').hide();
         } else {
             $('#pai').children('.autoajuda').show();
         }
+
         if(selectValor != 'romance'){
             $('#pai').children('.romance').hide();
         } else {
@@ -71,6 +74,11 @@ $(document).ready(function(){
         } else {
             $('#pai').children('.satira').show();
         }
+        if(selectValor != 'horror'){
+            $('#pai').children('.horror').hide();
+        } else {
+            $('#pai').children('.horror').show();
+        }
         if(selectValor == 'todos'){
             $('#pai').children('.satira').show();
             $('#pai').children('.suspense').show();
@@ -79,6 +87,8 @@ $(document).ready(function(){
             $('#pai').children('.autoajuda').show();
             $('#pai').children('.ficcao').show();
             $('#pai').children('.Literatura_fantastica').show();
+            $('#pai').children('.horror').show();
+
 
         }
     });

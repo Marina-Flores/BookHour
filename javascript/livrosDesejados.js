@@ -545,7 +545,7 @@
               })
               })
 
-              //adicionando A coragem de ser imperfeitoa pelo button no database firestore
+              //adicionando A coragem de ser imperfeito pelo button no database firestore
               const mentirosos_desejo = document.getElementById('mentirosos_desejo');
               mentirosos_desejo.addEventListener('click', function(){
                   const mentirosos_desejo = "Mentirosos";
@@ -565,3 +565,87 @@
                   }
               })
               })
+
+              //adicionando O morro dos ventos uivantes pelo button no database firestore
+              const ventosUivantes_desejo = document.getElementById('ventosUivantes_desejo');
+              ventosUivantes_desejo.addEventListener('click', function(){
+                  const ventosUivantes_desejo = "O morro dos ventos uivantes";
+              let id = counter += 1; 
+              auth.onAuthStateChanged(user => {
+                  if(user) {
+                      fs.collection('Livros desejados' + user.uid).doc('_' + id).set({
+                          id: '_' + id, 
+                          ventosUivantes_desejo
+                      }).then ( () => {
+                          alert('O morro dos ventos uivantes adicionado à lista de desejos'); 
+                      }).catch(err => {
+                          console.log(err.message);
+                      })
+                  }else {
+                      //console.log('user is not signed in to add livros')
+                  }
+              })
+              })
+
+               //adicionando Orgulho e Preconceito pelo button no database firestore
+               const orgulhoPreconceito_desejo = document.getElementById('orgulhoPreconceito_desejo');
+               orgulhoPreconceito_desejo.addEventListener('click', function(){
+                   const orgulhoPreconceito_desejo = "Orgulho e Preconceito";
+               let id = counter += 1; 
+               auth.onAuthStateChanged(user => {
+                   if(user) {
+                       fs.collection('Livros desejados' + user.uid).doc('_' + id).set({
+                           id: '_' + id, 
+                           orgulhoPreconceito_desejo
+                       }).then ( () => {
+                           alert('Orgulho e Preconceito adicionado à lista de desejos'); 
+                       }).catch(err => {
+                           console.log(err.message);
+                       })
+                   }else {
+                       //console.log('user is not signed in to add livros')
+                   }
+               })
+               })
+
+                //adicionando O iluminado pelo button no database firestore
+                const iluminado_desejo = document.getElementById('iluminado_desejo');
+                iluminado_desejo.addEventListener('click', function(){
+                    const iluminado_desejo = "O iluminado";
+                let id = counter += 1; 
+                auth.onAuthStateChanged(user => {
+                    if(user) {
+                        fs.collection('Livros desejados' + user.uid).doc('_' + id).set({
+                            id: '_' + id, 
+                            iluminado_desejo
+                        }).then ( () => {
+                            alert('O iluminado adicionado à lista de desejos'); 
+                        }).catch(err => {
+                            console.log(err.message);
+                        })
+                    }else {
+                        //console.log('user is not signed in to add livros')
+                    }
+                })
+                })
+
+                //adicionando It: A coisa pelo button no database firestore
+                const it_desejo = document.getElementById('it_desejo');
+                it_desejo.addEventListener('click', function(){
+                    const it_desejo = "It: A coisa";
+                let id = counter += 1; 
+                auth.onAuthStateChanged(user => {
+                    if(user) {
+                        fs.collection('Livros desejados' + user.uid).doc('_' + id).set({
+                            id: '_' + id, 
+                            it_desejo
+                        }).then ( () => {
+                            alert('It: A coisa adicionado à lista de desejos'); 
+                        }).catch(err => {
+                            console.log(err.message);
+                        })
+                    }else {
+                        //console.log('user is not signed in to add livros')
+                    }
+                })
+                })

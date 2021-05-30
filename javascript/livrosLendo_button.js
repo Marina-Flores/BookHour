@@ -565,3 +565,85 @@
                     }
                 })
                 })
+
+                 //adicionando O morro dos ventos uivantes pelo button no database firestore
+                 const ventosUivantes_lendo = document.getElementById('ventosUivantes_lendo');
+                 ventosUivantes_lendo.addEventListener('click', function(){
+                     const ventosUivantes_lendo = "O morro dos ventos uivantes";
+                 let id = counter += 1; 
+                 auth.onAuthStateChanged(user => {
+                     if(user) {
+                         fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
+                             id: '_' + id, 
+                             ventosUivantes_lendo
+                         }).then ( () => {
+                             alert('O morro dos ventos uivantes adicionado à lista de lendo'); 
+                         }).catch(err => {
+                             console.log(err.message);
+                         })
+                     }else {
+                         //console.log('user is not signed in to add livros')
+                     }
+                 })
+                 })
+
+                 //adicionando Orgulho e Preconceito pelo button no database firestore
+                 const orgulhoPreconceito_lendo = document.getElementById('orgulhoPreconceito_lendo');
+                 orgulhoPreconceito_lendo.addEventListener('click', function(){
+                     const orgulhoPreconceito_lendo = "Orgulho e Preconceito";
+                 let id = counter += 1; 
+                 auth.onAuthStateChanged(user => {
+                     if(user) {
+                         fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
+                             id: '_' + id, 
+                             orgulhoPreconceito_lendo
+                         }).then ( () => {
+                             alert('Orgulho e Preconceito adicionado à lista de lendo'); 
+                         }).catch(err => {
+                             console.log(err.message);
+                         })
+                     }else {
+                         //console.log('user is not signed in to add livros')
+                     }
+                 })
+                 })
+                 //adicionando O iluminado pelo button no database firestore
+                 const iluminado_lendo = document.getElementById('iluminado_lendo');
+                 iluminado_lendo.addEventListener('click', function(){
+                     const iluminado_lendo = "O iluminado";
+                 let id = counter += 1; 
+                 auth.onAuthStateChanged(user => {
+                     if(user) {
+                         fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
+                             id: '_' + id, 
+                             iluminado_lendo
+                         }).then ( () => {
+                             alert('O iluminado adicionado à lista de lendo'); 
+                         }).catch(err => {
+                             console.log(err.message);
+                         })
+                     }else {
+                         //console.log('user is not signed in to add livros')
+                     }
+                 })
+                 })
+                   //adicionando It: A coisa pelo button no database firestore
+                   const it_lendo = document.getElementById('it_lendo');
+                   it_lendo.addEventListener('click', function(){
+                       const it_lendo = "It: A coisa";
+                   let id = counter += 1; 
+                   auth.onAuthStateChanged(user => {
+                       if(user) {
+                           fs.collection('Livros lendo'  + ' ' + user.uid).doc('_' + id).set({
+                               id: '_' + id, 
+                               it_lendo
+                           }).then ( () => {
+                               alert('It: A coisa adicionado à lista de lendo'); 
+                           }).catch(err => {
+                               console.log(err.message);
+                           })
+                       }else {
+                           //console.log('user is not signed in to add livros')
+                       }
+                   })
+                   })
