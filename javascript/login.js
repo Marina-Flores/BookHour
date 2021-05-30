@@ -1,14 +1,17 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const fazerLogin = document.querySelector('.fazerLogin'); 
+const fazerCadastro = document.querySelector('.fazerCadastro'); 
+const sign_in_container = document.querySelector('.sign-in-container'); 
+const sign_up_container = document.querySelector('.sign-up-container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+// botao na página de cadastro
+fazerLogin.addEventListener('click', function(){
+    sign_in_container.classList.add('sign-in-container-aparecer');    
+})
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+// botao na página de login
+fazerCadastro.addEventListener('click', function(){
+    sign_in_container.classList.remove('sign-in-container-aparecer');    
+})
 
 // signup
 const signupForm = document.getElementById("signup-form");

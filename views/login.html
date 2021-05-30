@@ -27,65 +27,35 @@
 <body>
 
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
 
+	<div class="form-container sign-up-container">
 		<form autocomplete="off" class="form-group" id="signup-form">
-			<h1>Criar conta</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>ou use seu email para cadastro</span>
+			<h1>Criar conta</h1>			
       	<input class="form-control" type="text" id="name" placeholder="Nome" required />
 			<input class="form-control" type="email" id="email" placeholder="Email" required/>
 			<input class="form-control" type="password" id="password" placeholder="Senha" required/>
 			<button type="submit">Cadastrar</button>
+			<a class="fazerLogin">Ir para tela de login</a>
 		</form>
     <div class="container error" id="signupError"></div>
     <div class="container error" id="signupError2"></div>
-	</div>
+	</div>	
 
 	<div class="form-container sign-in-container">
 		<form autocomplete="off" class="form-group" id="login-form">
-			<h1>Entrar</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>ou use sua conta</span>
+			<h1>Entrar</h1>			
 			<input type="email" id="login-email" class="form-control" placeholder="Email" required  />
 			<input type="password" id="login-password" class="form-control" placeholder="Senha" required />
-			<a href="#">Esqueceu sua senha?</a>
 			<button type="submit">Entrar</button>
-		</form>
+			<a class="fazerCadastro">Ir para tela de cadastro</a>
+		</form>		
     <div class="container error" id="loginError"></div>
-
-
 	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Bem vindo de volta!</h1>
-				<p>Para se manter conectado conosco, faça o login com suas informações pessoais</p>
-				<button class="ghost" id="signIn">Entrar</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Olá, amigo(a)!</h1>
-				<p>Insira seus dados pessoais e comece sua jornada conosco</p>
-				<button class="ghost" id="signUp">Cadastrar</button>
-			</div>
-		</div>
-	</div>
+	
 </div>
 
-<footer>
-	<p>
-		Inspirado por
-		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">Florin Pop</a>
-	</p>
-</footer>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
